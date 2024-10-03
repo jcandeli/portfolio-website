@@ -1,12 +1,23 @@
+import { MouseEventHandler } from "react";
 import Audio from "@/components/Audio";
 import Image from "@/components/Image";
 import Video from "@/components/Video";
+import styled from "@emotion/styled";
 import { Media } from "@/types";
-import { MouseEventHandler } from "react";
+
+const CardTitle = styled.h2`
+  font-family: "Geist", sans-serif;
+  font-weight: 500;
+`;
+
+const CardDescription = styled.p`
+  font-family: "Geist", sans-serif;
+  font-weight: 300;
+`;
 
 interface MediaCardProps {
   media: Media;
-  onClick: MouseEventHandler | null;
+  onClick: MouseEventHandler;
 }
 
 const MediaCard = ({ media, onClick = () => {} }: MediaCardProps) => {
@@ -18,9 +29,11 @@ const MediaCard = ({ media, onClick = () => {} }: MediaCardProps) => {
       return (
         <a onClick={onClick}>
           <Image id={media.id} alt={media.title}>
-            <h2>{media.title}</h2>
-            {media.location && <h2>{media.location}</h2>}
-            {media.camera && <p>{media.camera}</p>}
+            <CardTitle>{media.title}</CardTitle>
+            {media.location && (
+              <CardDescription>{media.location}</CardDescription>
+            )}
+            {media.camera && <CardDescription>{media.camera}</CardDescription>}
           </Image>
         </a>
       );

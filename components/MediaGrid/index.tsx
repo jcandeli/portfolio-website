@@ -21,7 +21,7 @@ export default function MediaGrid({ media }: { media: Media }) {
       {selectedMedia && (
         <Modal isOpen onClose={() => setSelectedMedia(null)}>
           <Image
-            src={`http://jpcandelier.com/img/${selectedMedia.id}`}
+            src={`/portfolio/photos/${selectedMedia.id}`}
             alt={selectedMedia.title}
             style={{ objectFit: "contain" }}
             fill

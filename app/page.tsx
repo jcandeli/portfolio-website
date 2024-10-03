@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import MediaGrid from "@/components/MediaGrid";
-import mediaData from "@/app/data/media.json";
+import mediaData from "@/data/media.json";
 
 export const metadata: Metadata = {
   title: "Media Grid",
