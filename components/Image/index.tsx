@@ -2,10 +2,11 @@ import styled from "@emotion/styled";
 import Title from "@/components/Header";
 import TitleOverlay from "@/components/TitleOverlay";
 import { ReactNode } from "react";
+import { Type } from "@/types";
 
 interface ImageProps {
   id: string;
-  direction: "top" | "left";
+  type: Type;
   children: ReactNode;
 }
 
@@ -26,9 +27,12 @@ const ImageElement = styled.img`
   height: 100%;
 `;
 
-const Image = ({ id, children }: ImageProps) => (
+const Image = ({ id, children, type }: ImageProps) => (
   <ImageContainer>
-    <ImageElement src={`/portfolio/photos/${id}`} alt={`Image with id ${id}`} />
+    <ImageElement
+      src={`/portfolio/${type}/${id}`}
+      alt={`Image with id ${id}`}
+    />
     <TitleOverlay>{children}</TitleOverlay>
   </ImageContainer>
 );

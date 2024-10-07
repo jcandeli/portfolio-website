@@ -28,7 +28,7 @@ const MediaCard = ({ media, onClick = () => {} }: MediaCardProps) => {
     case "design":
       return (
         <a onClick={onClick}>
-          <Image id={media.id} alt={media.title}>
+          <Image id={media.id} alt={media.title} type={media.type}>
             <CardTitle>{media.title}</CardTitle>
             {media.location && (
               <CardDescription>{media.location}</CardDescription>
