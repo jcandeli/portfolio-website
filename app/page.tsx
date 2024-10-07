@@ -3,8 +3,8 @@ import MediaGrid from "@/components/MediaGrid";
 import mediaData from "@/data/media.json";
 
 export const metadata: Metadata = {
-  title: "Media Grid",
-  description: "A grid displaying various media items",
+  title: "JP Candelier",
+  description: "Explore the creative works by JP Candelier",
 };
 
 export default function Home() {
