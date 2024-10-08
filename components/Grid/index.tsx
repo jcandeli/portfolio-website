@@ -39,7 +39,7 @@ const GridItem: StyledComponent<"div", any, GridItemProps> = styled.div`
     /* Set item to fill the entire grid cell */
     height: ${({ orientation }) =>
       (orientation === "vertical" && "auto") ||
-      (orientation === "block" && "calc((100vw / 2) - 2rem)") ||
+      (orientation === "block" && "auto") ||
       "calc((min(100vw, 1400px) / 3) - 2rem)"};
   }
 `;

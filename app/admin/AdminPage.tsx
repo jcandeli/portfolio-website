@@ -3,9 +3,9 @@
 import { useState, useEffect, DragEvent } from "react";
 import styled from "@emotion/styled";
 import { Media } from "@/types";
-import MediaGrid from "@/components/MediaGrid";
 import Grid, { GridItem } from "@/components/Grid";
 import MediaCard from "@/components/MediaCard";
+import { Button } from "@/components/ui/button";
 
 const AdminContainer = styled.div`
   padding: 2rem;
@@ -49,21 +49,35 @@ export default function AdminPage() {
     setMediaItems(newItems);
   };
 
+  const handleRandomize = () => {
+    setMediaItems((prevItems) => {
+      const newItems = [...prevItems];
+      for (let i = newItems.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [newItems[i], newItems[j]] = [newItems[j], newItems[i]];
+      }
+      return newItems;
+    });
+  };
+
   return (
     <AdminContainer>
       <h1>Admin Page</h1>
-      <div style={{ maxWidth: 960 }}>
+      <Button onClick={handleRandomize}>Randomize Order</Button>
+      <div style={{ marginTop: "1rem" }}>
         <Grid>
           {mediaItems.map((item, index) => (
             <DraggableItem
               key={item.id}
               orientation={item.orientation}
               draggable
-              onDragStart={(e) => handleDragStart(e, index)}
+              onDragStart={(e: DragEvent<HTMLDivElement>) =>
+                handleDragStart(e, index)
+              }
               onDragOver={handleDragOver}
-              onDrop={(e) => handleDrop(e, index)}
+              onDrop={(e: DragEvent<HTMLDivElement>) => handleDrop(e, index)}
             >
-              <GridItem key={item.id} orientation={item.orientation}>
+              <GridItem orientation={item.orientation}>
                 <MediaCard media={item} onClick={() => {}} />
               </GridItem>
             </DraggableItem>
