@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import Title from "@/components/Header";
 import TitleOverlay from "@/components/TitleOverlay";
 import { ReactNode } from "react";
 import { Type } from "@/types";
