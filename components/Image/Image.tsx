@@ -31,8 +31,8 @@ const ImageElement = ({ media }: { media: Media }) => {
       <Image
         src={`/portfolio/${type}/${id}`}
         alt={`${title}`}
-        layout="fill"
-        objectFit="cover"
+        fill
+        className="object-cover"
       />
       <TitleOverlay>
         <Title>{title}</Title>
