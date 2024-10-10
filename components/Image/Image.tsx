@@ -14,14 +14,8 @@ const Description = styled.p`
 `;
 
 const ImageContainer = styled.figure`
-  align-items: center;
-  background-color: #dadada;
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  overflow: hidden;
   position: relative;
-  width: 100%;
+  height: 100%;
 `;
 
 const ImageElement = ({ media }: { media: Media }) => {

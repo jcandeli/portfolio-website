@@ -16,9 +16,10 @@ const MediaCard = ({ media, onClick = () => {} }: MediaCardProps) => {
     case "photo":
     case "design":
       return (
-        <a onClick={onClick}>
+        <button onClick={onClick} className="h-full w-full">
+          {/* eslint-disable-next-line jsx-a11y/alt-text */}
           <Image media={media} />
-        </a>
+        </button>
       );
     case "music":
       return <Audio id={media.id} />;

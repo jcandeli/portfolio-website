@@ -9,9 +9,10 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main>
+    <>
       <h1>JP Candelier</h1>
+      <a id="main-content" />
       <MediaGrid media={mediaData} />
-    </main>
+    </>
   );
 }
