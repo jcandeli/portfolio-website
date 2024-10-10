@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main>
+      <h1>JP Candelier</h1>
       <MediaGrid media={mediaData} />
     </main>
   );

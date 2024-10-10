@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-const TitleOverlay = styled.div`
+const TitleOverlay = styled.figcaption`
   position: absolute;
   padding: 36px 0 0 36px;
   top: 0;
