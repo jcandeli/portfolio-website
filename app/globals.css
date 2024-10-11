@@ -1,25 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background-color: #f0f0f0;
-  --text-color: #333;
-}
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;700&display=swap');
 
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: var(--background-color);
-  color: var(--text-color);
+  font-family: 'Geist', sans-serif;
   margin: 0;
   padding: 0;
 }
 
 main {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 2rem;
 }
 
-h1 {
-  text-align: center;
-  margin-bottom: 2rem;
+a:focus, button:focus, a:focus-visible,
+button:focus-visible {
+  outline: 2px dashed currentColor;
+  outline-offset: 4px;
 }
