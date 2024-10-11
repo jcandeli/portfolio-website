@@ -1,6 +1,5 @@
 import { ReactNode } from "react";
 import styled from "@emotion/styled";
-
 const ModalOverlay = styled.div`
   position: fixed;
   top: 0;
@@ -12,21 +11,20 @@ const ModalOverlay = styled.div`
   align-items: center;
   backdrop-filter: blur(32px);
 `;
-
 const ModalContent = styled.div`
   position: relative;
   background-color: transparent;
-  width: 85%;
-  height: 85vh;
+  width: 100%;
+  height: 100%;
+  max-width: 85vw;
+  max-height: 85vh;
   overflow-y: auto;
 `;
-
 interface ModalProps {
   isOpen: boolean;
   onClose?: () => void;
   children?: ReactNode;
 }
-
 const Modal = ({ isOpen, onClose, children }: ModalProps) => {
   return (
     <>
@@ -38,5 +36,4 @@ const Modal = ({ isOpen, onClose, children }: ModalProps) => {
     </>
   );
 };
-
 export default Modal;

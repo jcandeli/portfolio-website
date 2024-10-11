@@ -1,4 +1,7 @@
 import { Metadata } from "next";
+import MediaGrid from "@/components/MediaGrid";
+import mediaData from "@/data/media.json";
+import { Media } from "@/types";
 
 interface FilterPageProps {
   params: {
@@ -7,24 +10,34 @@ interface FilterPageProps {
 }
 
 export const generateMetadata = ({ params }: FilterPageProps): Metadata => {
+  const capitalizedFilter =
+    params.filter.charAt(0).toUpperCase() + params.filter.slice(1);
   return {
-    title: `${
-      params.filter.charAt(0).toUpperCase() + params.filter.slice(1)
-    } | Your Portfolio`,
-    description: `View ${params.filter} in Your Portfolio`,
+    title: `${capitalizedFilter} | JP Candelier`,
+    description: `Explore ${capitalizedFilter} works by JP Candelier`,
   };
 };
 
 export default function FilterPage({ params }: FilterPageProps) {
   const { filter } = params;
+  const filteredMedia = mediaData.filter((item: Media) => {
+    switch (filter.toLowerCase()) {
+      case "photos":
+        return item.type === "photo";
+      case "designs":
+        return item.type === "design";
+      case "music":
+        return item.type === "music" || item.type === "video";
+      default:
+        return true;
+    }
+  });
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6 capitalize">{filter}</h1>
-      <p className="text-lg">
-        You are viewing the {filter} category. Content for {filter} will be
-        displayed here.
-      </p>
-    </div>
+    <>
+      <h1>{filter.charAt(0).toUpperCase() + filter.slice(1)}</h1>
+      <a id="main-content" />
+      <MediaGrid media={filteredMedia} />
+    </>
   );
 }

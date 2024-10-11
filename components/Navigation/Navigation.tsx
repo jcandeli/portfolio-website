@@ -17,13 +17,16 @@ function Navigation() {
         <NavigationMenuItem>
           <NavigationMenuTrigger>Filter</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <NavigationMenuLink asChild>
+            <NavigationMenuLink>
+              <Link href="/">All</Link>
+            </NavigationMenuLink>
+            <NavigationMenuLink>
               <Link href="/photos">Photos</Link>
             </NavigationMenuLink>
-            <NavigationMenuLink asChild>
+            <NavigationMenuLink>
               <Link href="/designs">Designs</Link>
             </NavigationMenuLink>
-            <NavigationMenuLink asChild>
+            <NavigationMenuLink>
               <Link href="/music">Music</Link>
             </NavigationMenuLink>
           </NavigationMenuContent>
