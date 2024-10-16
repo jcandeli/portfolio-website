@@ -1,37 +1,30 @@
 import styled from "@emotion/styled";
 import TitleOverlay from "@/components/TitleOverlay";
-import Image from "next/image";
-import { Media } from "@/types";
-
-const Title = styled.h2`
-  font-family: "Geist", sans-serif;
-  font-weight: 500;
-`;
-
-const Description = styled.p`
-  font-family: "Geist", sans-serif;
-  font-weight: 300;
-`;
+import { Design, Photo } from "@/types";
 
 const ImageContainer = styled.figure`
   position: relative;
   height: 100%;
 `;
 
-const ImageElement = ({ media }: { media: Media }) => {
-  const { id, type, title, location, camera } = media;
+const Image = styled.img`
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+`;
+
+const ImageElement = ({ media }: { media: Photo | Design }) => {
+  const { id, type, title } = media;
+  const location = "location" in media ? media.location : undefined;
+  const camera = "camera" in media ? media.camera : undefined;
+
   return (
     <ImageContainer>
-      <Image
-        src={`/portfolio/${type}/${id}`}
-        alt={`${title}`}
-        fill
-        className="object-cover"
-      />
+      <Image src={`/portfolio/${type}/${id}`} alt={`${title}`} />
       <TitleOverlay>
-        <Title>{title}</Title>
-        {location && <Description>{location}</Description>}
-        {camera && <Description>{camera}</Description>}
+        <h2>{title}</h2>
+        {location && <p>{location}</p>}
+        {camera && <p>{camera}</p>}
       </TitleOverlay>
     </ImageContainer>
   );

@@ -20,7 +20,7 @@ export const generateMetadata = ({ params }: FilterPageProps): Metadata => {
 
 export default function FilterPage({ params }: FilterPageProps) {
   const { filter } = params;
-  const filteredMedia = mediaData.filter((item: Media) => {
+  const filteredMedia = (mediaData as Media[]).filter((item) => {
     switch (filter.toLowerCase()) {
       case "photos":
         return item.type === "photo";
@@ -34,10 +34,9 @@ export default function FilterPage({ params }: FilterPageProps) {
   });
 
   return (
-    <>
-      <h1>{filter.charAt(0).toUpperCase() + filter.slice(1)}</h1>
-      <a id="main-content" />
-      <MediaGrid media={filteredMedia} />
-    </>
+    <MediaGrid
+      media={filteredMedia}
+      heading={filter.charAt(0).toUpperCase() + filter.slice(1)}
+    />
   );
 }

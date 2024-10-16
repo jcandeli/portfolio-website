@@ -1,11 +1,12 @@
 "use client";
 
-import { useState, useEffect, DragEvent } from "react";
+import { useState, DragEvent } from "react";
 import styled from "@emotion/styled";
 import { Media } from "@/types";
 import Grid, { GridItem } from "@/components/Grid";
 import MediaCard from "@/components/MediaCard";
 import { Button } from "@/components/ui/button";
+import mediaData from "@/data/media.json";
 
 const AdminContainer = styled.div`
   padding: 2rem;
@@ -24,13 +25,7 @@ const JsonTextarea = styled.textarea`
 `;
 
 export default function AdminPage() {
-  const [mediaItems, setMediaItems] = useState<Media[]>([]);
-
-  useEffect(() => {
-    fetch("/api/media")
-      .then((res) => res.json())
-      .then((data) => setMediaItems(data));
-  }, []);
+  const [mediaItems, setMediaItems] = useState<Media[]>(mediaData as Media[]);
 
   const handleDragStart = (e: DragEvent<HTMLDivElement>, index: number) => {
     e.dataTransfer.setData("text/plain", index.toString());
@@ -69,7 +64,6 @@ export default function AdminPage() {
           {mediaItems.map((item, index) => (
             <DraggableItem
               key={item.id}
-              orientation={item.orientation}
               draggable
               onDragStart={(e: DragEvent<HTMLDivElement>) =>
                 handleDragStart(e, index)
@@ -77,7 +71,7 @@ export default function AdminPage() {
               onDragOver={handleDragOver}
               onDrop={(e: DragEvent<HTMLDivElement>) => handleDrop(e, index)}
             >
-              <GridItem orientation={item.orientation}>
+              <GridItem {...item}>
                 <MediaCard media={item} onClick={() => {}} />
               </GridItem>
             </DraggableItem>

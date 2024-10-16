@@ -13,8 +13,9 @@ function AboutPage() {
         <section>
           <h2 className="text-2xl font-semibold mb-3">Who I Am</h2>
           <p>
-            Hello! I'm [Your Name], a [your profession/title] based in [your
-            location]. I'm passionate about [your interests/specialties].
+            Hello! I&apos;m [Your Name], a [your profession/title] based in
+            [your location]. I&apos;m passionate about [your
+            interests/specialties].
           </p>
         </section>
         <section>
@@ -31,8 +32,8 @@ function AboutPage() {
         <section>
           <h2 className="text-2xl font-semibold mb-3">Get in Touch</h2>
           <p>
-            I'm always open to new opportunities and collaborations. Feel free
-            to reach out to me via [preferred contact method].
+            I&apos;m always open to new opportunities and collaborations. Feel
+            free to reach out to me via [preferred contact method].
           </p>
         </section>
       </div>

@@ -1,6 +1,7 @@
-import Navigation from "@/components/Navigation";
-import "./globals.css";
+// import Navigation from "@/components/Navigation";
+import FontLoader from "@/components/FontLoader";
 import { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "My Portfolio",
@@ -14,6 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <FontLoader />
       <body>
         <a
           href="#main-content"
@@ -21,7 +23,7 @@ export default function RootLayout({
         >
           Skip to main content
         </a>
-        <Navigation />
+        {/* <Navigation /> */}
         <main id="main-content">{children}</main>
       </body>
     </html>

@@ -24,7 +24,7 @@ const MediaCard = ({ media, onClick = () => {} }: MediaCardProps) => {
     case "music":
       return <Audio id={media.id} />;
     default:
-      return <p>Invalid media type. {media.type}</p>;
+      return <p>Invalid media type.</p>;
   }
 };
 

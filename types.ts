@@ -1,19 +1,30 @@
-type GenericMedia = {
-  type: Type;
+type Music = {
+  type: "music";
+  id: string;
+};
+
+export type Video = {
+  type: "video";
   id: string;
   title: string;
-  orientation?: Orinetation;
 };
 
-export type Video = GenericMedia;
-
-export type Photo = GenericMedia & {
+export type Photo = {
+  type: "photo";
+  id: string;
+  title: string;
   location?: string;
   camera?: string;
+  orientation?: Orientation;
 };
 
-export type Orinetation = "vertical" | "horizontal" | "banner" | "block";
+export type Design = {
+  type: "design";
+  id: string;
+  title: string;
+  orientation?: Orientation;
+};
 
-export type Type = "photo" | "video" | "music" | "design";
+export type Orientation = "vertical" | "horizontal" | "banner" | "block";
 
-export type Media = Video | Photo;
+export type Media = Video | Photo | Music | Design;
