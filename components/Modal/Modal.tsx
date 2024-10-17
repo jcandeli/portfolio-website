@@ -24,13 +24,16 @@ interface ModalProps {
   isOpen: boolean;
   onClose?: () => void;
   children?: ReactNode;
+  id?: string;
 }
-const Modal = ({ isOpen, onClose, children }: ModalProps) => {
+const Modal = ({ isOpen, onClose, children, id }: ModalProps) => {
   return (
     <>
       {isOpen && (
         <ModalOverlay onClick={onClose}>
-          <ModalContent onClick={onClose}>{children}</ModalContent>
+          <ModalContent onClick={onClose} id={id}>
+            {children}
+          </ModalContent>
         </ModalOverlay>
       )}
     </>

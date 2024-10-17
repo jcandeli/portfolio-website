@@ -5,7 +5,6 @@ import styled from "@emotion/styled";
 import { Media } from "@/types";
 import Grid, { GridItem } from "@/components/Grid";
 import MediaCard from "@/components/MediaCard";
-import { Button } from "@/components/ui/button";
 import mediaData from "@/data/media.json";
 
 const AdminContainer = styled.div`
@@ -58,7 +57,7 @@ export default function AdminPage() {
   return (
     <AdminContainer>
       <h1>Admin Page</h1>
-      <Button onClick={handleRandomize}>Randomize Order</Button>
+      <button onClick={handleRandomize}>Randomize Order</button>
       <div style={{ marginTop: "1rem" }}>
         <Grid>
           {mediaItems.map((item, index) => (

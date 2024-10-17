@@ -37,21 +37,29 @@ export default function MediaGrid({
                 : undefined
             }
           >
-            <MediaCard
-              media={media}
-              onClick={() => {
-                if (media.type === "photo") {
-                  setSelectedMedia(media as Photo);
-                } else if (media.type === "design") {
-                  setSelectedMedia(media as Design);
-                }
-              }}
-            />
+            {media.type === "photo" || media.type === "design" ? (
+              <button
+                onClick={() => setSelectedMedia(media as Photo | Design)}
+                className="h-full w-full"
+                aria-haspopup="dialog"
+                aria-label={`View ${media.title}`}
+                aria-controls="media-modal"
+              >
+                <MediaCard media={media} />
+              </button>
+            ) : (
+              <MediaCard media={media} />
+            )}
           </GridItem>
         ))}
 
         {selectedMedia && (
-          <Modal isOpen onClose={() => setSelectedMedia(null)}>
+          <Modal
+            isOpen
+            onClose={() => setSelectedMedia(null)}
+            aria-label={`${selectedMedia.title} details`}
+            id="media-modal"
+          >
             <figure>
               <Image
                 src={`/portfolio/${selectedMedia.type}/${selectedMedia.id}`}

@@ -1,59 +1,53 @@
 "use client";
 
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
 import Link from "next/link";
 
 function Navigation() {
   return (
-    <NavigationMenu>
-      <NavigationMenuList>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>Filter</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <NavigationMenuLink>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li>
+          <button aria-haspopup="true" aria-expanded="false">
+            Filter
+          </button>
+          <ul>
+            <li>
               <Link href="/">All</Link>
-            </NavigationMenuLink>
-            <NavigationMenuLink>
+            </li>
+            <li>
               <Link href="/photos">Photos</Link>
-            </NavigationMenuLink>
-            <NavigationMenuLink>
+            </li>
+            <li>
               <Link href="/designs">Designs</Link>
-            </NavigationMenuLink>
-            <NavigationMenuLink>
+            </li>
+            <li>
               <Link href="/music">Music</Link>
-            </NavigationMenuLink>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuLink href="/about">About me</NavigationMenuLink>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuLink
+            </li>
+          </ul>
+        </li>
+        <li>
+          <Link href="/about">About me</Link>
+        </li>
+        <li>
+          <a
             href="https://linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
           >
             LinkedIn
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuLink
+          </a>
+        </li>
+        <li>
+          <a
             href="https://github.com"
             target="_blank"
             rel="noopener noreferrer"
           >
             GitHub
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-      </NavigationMenuList>
-    </NavigationMenu>
+          </a>
+        </li>
+      </ul>
+    </nav>
   );
 }
 
