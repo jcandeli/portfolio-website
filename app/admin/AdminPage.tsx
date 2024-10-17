@@ -71,7 +71,7 @@ export default function AdminPage() {
               onDrop={(e: DragEvent<HTMLDivElement>) => handleDrop(e, index)}
             >
               <GridItem {...item}>
-                <MediaCard media={item} onClick={() => {}} />
+                <MediaCard media={item} />
               </GridItem>
             </DraggableItem>
           ))}
