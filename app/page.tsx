@@ -9,5 +9,11 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  return <MediaGrid media={mediaData as Media[]} heading="JP Candelier" />;
+  return (
+    <MediaGrid
+      media={mediaData as Media[]}
+      heading="JP Candelier"
+      // subheading="Creative Expressions in Pixels, Notes, and Colors."
+    />
+  );
 }

@@ -22,7 +22,7 @@ const ImageElement = ({ media }: { media: Photo | Design }) => {
     <ImageContainer>
       <Image src={`/portfolio/${type}/${id}`} alt={`${title}`} />
       <TitleOverlay>
-        <h2>{title}</h2>
+        <h3>{title}</h3>
         {location && <p>{location}</p>}
         {camera && <p>{camera}</p>}
       </TitleOverlay>
