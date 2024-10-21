@@ -1,4 +1,4 @@
-// import Navigation from "@/components/Navigation";
+import Navigation from "@/components/Navigation";
 import FontLoader from "@/components/FontLoader";
 import { Metadata } from "next";
 import "./globals.css";
@@ -23,7 +23,7 @@ export default function RootLayout({
         >
           Skip to main content
         </a>
-        {/* <Navigation /> */}
+        <Navigation />
         <main id="main-content">{children}</main>
       </body>
     </html>

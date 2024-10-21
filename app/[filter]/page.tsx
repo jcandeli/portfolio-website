@@ -40,3 +40,7 @@ export default function FilterPage({ params }: FilterPageProps) {
     />
   );
 }
+
+export async function generateStaticParams() {
+  return [{ filter: "photos" }, { filter: "designs" }, { filter: "music" }];
+}

@@ -1,34 +1,43 @@
 "use client";
 
 import Grid, { GridItem } from "@/components/Grid";
-import Image from "@/components/Image";
 import MediaCard from "@/components/MediaCard";
 import Modal from "@/components/Modal";
 import { Design, Media, Photo } from "@/types";
-import emotionStyled from "@emotion/styled";
+import styled from "@emotion/styled";
 import { useState } from "react";
 
-const Heading = emotionStyled.h1`
-  font-size: min(23vw, 326px);
+const Heading = styled.h1`
+  font-size: min(25vw, 348px);
   line-height: 0.85;
+  letter-spacing: max(-1vw, -0.5rem);
+  text-align: center;
+  position: relative; // so we can use z-index to prevent overlap with navigation
+  z-index: 1;
 `;
 
-const Subheading = emotionStyled.h2`
+const Subheading = styled.h2`
   font-size: 3rem;
   line-height: 0.85;
 `;
 
-const ModalContent = emotionStyled.figure`
+const ModalContent = styled.figure`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 `;
 
-const ImageCaption = emotionStyled.figcaption`
+const ImageCaption = styled.figcaption`
   width: 75%;
   align-self: flex-start;
   margin-block: 0 2rem;
+`;
+
+const Image = styled.img`q
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 `;
 
 export default function MediaGrid({
@@ -91,8 +100,10 @@ export default function MediaGrid({
                   </>
                 )}
               </ImageCaption>
-              {/* eslint-disable-next-line jsx-a11y/alt-text */}
-              <Image media={selectedMedia} />
+              <Image
+                src={`/portfolio/${selectedMedia.type}/${selectedMedia.id}`}
+                alt={`${selectedMedia.title}`}
+              />
             </ModalContent>
           </Modal>
         )}
