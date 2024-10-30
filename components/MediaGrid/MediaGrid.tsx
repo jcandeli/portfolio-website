@@ -7,15 +7,6 @@ import { Design, Media, Photo } from "@/types";
 import styled from "@emotion/styled";
 import { useState } from "react";
 
-const Heading = styled.h1`
-  font-size: min(25vw, 348px);
-  line-height: 0.85;
-  letter-spacing: max(-1vw, -0.5rem);
-  text-align: center;
-  position: relative; // so we can use z-index to prevent overlap with navigation
-  z-index: 1;
-`;
-
 const Subheading = styled.h2`
   font-size: 3rem;
   line-height: 0.85;
@@ -42,18 +33,15 @@ const Image = styled.img`q
 
 export default function MediaGrid({
   media,
-  heading,
   subheading,
 }: {
   media: Media[];
-  heading: string;
   subheading?: string;
 }) {
   const [selectedMedia, setSelectedMedia] = useState<Photo | Design | null>();
 
   return (
     <>
-      <Heading>{heading}</Heading>
       {subheading && <Subheading>{subheading}</Subheading>}
       <Grid>
         {media.map((media: Media) => (
