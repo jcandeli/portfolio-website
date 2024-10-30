@@ -1,6 +1,7 @@
-import styled from "@emotion/styled";
+import Heading from "@/components/Heading";
 import TitleOverlay from "@/components/TitleOverlay";
 import { Design, Photo } from "@/types";
+import styled from "@emotion/styled";
 
 const ImageContainer = styled.figure`
   position: relative;
@@ -22,7 +23,7 @@ const ImageElement = ({ media }: { media: Photo | Design }) => {
     <ImageContainer>
       <Image src={`/portfolio/${type}/${id}`} alt={`${title}`} />
       <TitleOverlay>
-        <h3>{title}</h3>
+        <Heading level={3}>{title}</Heading>
         {location && <p>{location}</p>}
         {camera && <p>{camera}</p>}
       </TitleOverlay>

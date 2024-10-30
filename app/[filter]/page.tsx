@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import MediaGrid from "@/components/MediaGrid";
+import Heading from "@/components/Heading";
 import mediaData from "@/data/media.json";
 import { Media } from "@/types";
 
@@ -34,10 +35,12 @@ export default function FilterPage({ params }: FilterPageProps) {
   });
 
   return (
-    <MediaGrid
-      media={filteredMedia}
-      heading={filter.charAt(0).toUpperCase() + filter.slice(1)}
-    />
+    <>
+      <Heading level={1}>
+        {filter.charAt(0).toUpperCase() + filter.slice(1)}
+      </Heading>
+      <MediaGrid media={filteredMedia} />
+    </>
   );
 }
 

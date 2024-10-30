@@ -1,6 +1,7 @@
 "use client";
 
 import Grid, { GridItem } from "@/components/Grid";
+import Heading from "@/components/Heading";
 import MediaCard from "@/components/MediaCard";
 import Modal from "@/components/Modal";
 import { Design, Media, Photo } from "@/types";
@@ -80,7 +81,7 @@ export default function MediaGrid({
           >
             <ModalContent>
               <ImageCaption>
-                <h3>{selectedMedia.title}</h3>
+                <Heading level={3}>{selectedMedia.title}</Heading>
                 {selectedMedia.type === "photo" && (
                   <>
                     {selectedMedia.location && <p>{selectedMedia.location}</p>}
