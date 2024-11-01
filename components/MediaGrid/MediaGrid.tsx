@@ -84,7 +84,9 @@ export default function MediaGrid({
                 <Heading level={3}>{selectedMedia.title}</Heading>
                 {selectedMedia.type === "photo" && (
                   <>
-                    {selectedMedia.location && <p>{selectedMedia.location}</p>}
+                    {selectedMedia.description && (
+                      <p>{selectedMedia.description}</p>
+                    )}
                     {selectedMedia.camera && <p>{selectedMedia.camera}</p>}
                   </>
                 )}

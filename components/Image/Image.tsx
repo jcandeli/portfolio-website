@@ -16,7 +16,7 @@ const Image = styled.img`
 
 const ImageElement = ({ media }: { media: Photo | Design }) => {
   const { id, type, title } = media;
-  const location = "location" in media ? media.location : undefined;
+  const description = "description" in media ? media.description : undefined;
   const camera = "camera" in media ? media.camera : undefined;
 
   return (
@@ -24,7 +24,7 @@ const ImageElement = ({ media }: { media: Photo | Design }) => {
       <Image src={`/portfolio/${type}/${id}`} alt={`${title}`} />
       <TitleOverlay>
         <Heading level={3}>{title}</Heading>
-        {location && <p>{location}</p>}
+        {description && <p>{description}</p>}
         {camera && <p>{camera}</p>}
       </TitleOverlay>
     </ImageContainer>

@@ -13,7 +13,7 @@ export type Photo = {
   type: "photo";
   id: string;
   title: string;
-  location?: string;
+  description?: string;
   camera?: string;
   orientation?: Orientation;
 };
