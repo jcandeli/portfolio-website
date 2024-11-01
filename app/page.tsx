@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <Heading level={1}>JP Candelier</Heading>
-      <Heading level={2}>
+      <Heading level={2} className="heading2">
         Creative Expressions in Pixels, Notes, and Colors.
       </Heading>
       <MediaGrid media={mediaData as Media[]} />
