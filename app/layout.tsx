@@ -1,8 +1,7 @@
 import Navigation from "@/components/Navigation";
 import { Metadata } from "next";
-import "./globals.css";
-
 import { Roboto } from "next/font/google";
+import "./globals.css";
 
 const roboto = Roboto({
   weight: ["400"],
@@ -12,8 +11,31 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
-  description: "A showcase of my work",
+  metadataBase: new URL("https://jpcandelier.com"),
+  title: "JP Candelier - Creative Works",
+  description: "Creative Expressions in Pixels, Notes, and Colors.",
+  openGraph: {
+    title: "JP Candelier - Creative Works",
+    description: "Creative Expressions in Pixels, Notes, and Colors.",
+    url: "https://jpcandelier.com",
+    siteName: "JP Candelier",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "JP Candelier - Creative Works",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "JP Candelier - Creative Works",
+    description: "Creative Expressions in Pixels, Notes, and Colors.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({
