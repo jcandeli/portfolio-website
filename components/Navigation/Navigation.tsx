@@ -6,7 +6,7 @@ import styled from "@emotion/styled";
 import { ChevronDown } from "lucide-react";
 
 const NavContainer = styled.nav`
-  padding: 1rem 2rem;
+  padding: 1rem 0;
   position: relative; // so we can use z-index to prevent H1 from overlapping
   z-index: 2;
 `;
@@ -26,7 +26,6 @@ const DropdownButton = styled.button`
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 1rem;
   display: flex;
   align-items: center;
 `;
@@ -46,6 +45,7 @@ const NavLink = styled(Link)`
   color: inherit;
   display: flex;
   align-items: center;
+  font-size: 1.25rem;
   &:hover {
     text-decoration: underline;
   }
