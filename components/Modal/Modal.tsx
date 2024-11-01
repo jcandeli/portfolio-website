@@ -21,6 +21,8 @@ const ModalContent = styled.div`
   background-color: white;
   padding: 2rem;
   border-radius: 0.5rem;
+  max-width: 98vw;
+  max-height: 98vh;
 `;
 
 const CloseButton = styled.button`

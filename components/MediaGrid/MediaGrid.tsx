@@ -26,10 +26,10 @@ const ImageCaption = styled.figcaption`
   margin-block: 0 2rem;
 `;
 
-const Image = styled.img`q
+const Image = styled.img`
   object-fit: cover;
-  width: 100%;
-  height: 100%;
+  max-width: 70vw;
+  max-height: 70vh;
 `;
 
 export default function MediaGrid({
