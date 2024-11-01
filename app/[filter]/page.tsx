@@ -15,7 +15,25 @@ export const generateMetadata = ({ params }: FilterPageProps): Metadata => {
     params.filter.charAt(0).toUpperCase() + params.filter.slice(1);
   return {
     title: `${capitalizedFilter} | JP Candelier`,
-    description: `Explore ${capitalizedFilter} works by JP Candelier`,
+    description: `Explore ${capitalizedFilter} by JP Candelier`,
+    openGraph: {
+      title: `${capitalizedFilter} | JP Candelier`,
+      description: `Explore ${capitalizedFilter} by JP Candelier`,
+      images: [
+        {
+          url: `/og-image.png`,
+          width: 1200,
+          height: 630,
+          alt: `JP Candelier - ${capitalizedFilter}`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${capitalizedFilter} | JP Candelier`,
+      description: `Explore ${capitalizedFilter} by JP Candelier`,
+      images: [`/og-image.png`],
+    },
   };
 };
 
