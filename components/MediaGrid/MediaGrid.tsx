@@ -86,14 +86,10 @@ export default function MediaGrid({
             <ModalContent>
               <ImageCaption>
                 <Heading level={3}>{selectedMedia.title}</Heading>
-                {selectedMedia.type === "photo" && (
-                  <>
-                    {selectedMedia.description && (
-                      <p>{selectedMedia.description}</p>
-                    )}
-                    {selectedMedia.camera && <p>{selectedMedia.camera}</p>}
-                  </>
+                {"description" in selectedMedia && (
+                  <p>{selectedMedia.description}</p>
                 )}
+                {"camera" in selectedMedia && <p>{selectedMedia.camera}</p>}
               </ImageCaption>
               <Image
                 src={`/portfolio/${selectedMedia.type}/${selectedMedia.id}`}
