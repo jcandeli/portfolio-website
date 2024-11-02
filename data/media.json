@@ -66,6 +66,7 @@
     "id": "biggie.jpg",
     "type": "design",
     "title": "Biggie",
+    "description": "Digital art",
     "orientation": "vertical"
   },
   {
@@ -149,13 +150,15 @@
   {
     "id": "tyler.jpg",
     "type": "design",
-    "title": "",
+    "title": "Tyler",
+    "description": "Digital art",
     "orientation": "vertical"
   },
   {
     "id": "freshest.jpg",
     "type": "design",
-    "title": "",
+    "title": "The Fresh Establishment",
+    "description": "Band poster",
     "orientation": "horizontal"
   },
   {
@@ -165,13 +168,15 @@
   {
     "id": "5214247101_fbfca1e0eb_z.jpg",
     "type": "design",
-    "title": "",
+    "title": "N'Goni Dub Trio",
+    "description": "Band poster",
     "orientation": "vertical"
   },
   {
     "id": "5195553816_b400ac95ee.jpg",
     "type": "design",
-    "title": "",
+    "title": "Barika",
+    "description": "Band poster",
     "orientation": "horizontal"
   },
   {
@@ -226,31 +231,36 @@
   {
     "id": "5176407528_574695a7e0.jpg",
     "type": "design",
-    "title": "",
+    "title": "Barika",
+    "description": "Band poster",
     "orientation": "vertical"
   },
   {
     "id": "5766888298_90828f76db.jpg",
     "type": "design",
-    "title": "",
+    "title": "Tiffany Pfieffer",
+    "description": "Band poster",
     "orientation": "vertical"
   },
   {
     "id": "kina-zore-bishops.jpg",
     "type": "design",
-    "title": "",
+    "title": "Kina Zore",
+    "description": "Band poster",
     "orientation": "vertical"
   },
   {
     "id": "invisible homes.jpg",
     "type": "design",
-    "title": "",
+    "title": "Invisible Homes",
+    "description": "Album art",
     "orientation": "horizontal"
   },
   {
     "id": "49755678801_e20169b22b_k.jpg",
     "type": "design",
-    "title": "",
+    "title": "The Projects",
+    "description": "Digital art",
     "orientation": "vertical"
   },
   {
@@ -332,7 +342,8 @@
   {
     "id": "49754742701_d8523a3720_k.jpg",
     "type": "design",
-    "title": "",
+    "title": "The Projects",
+    "description": "Digital art",
     "orientation": "vertical"
   },
   {
@@ -353,13 +364,15 @@
   {
     "id": "barika-malmaiz.jpg",
     "type": "design",
-    "title": "",
+    "title": "Barika",
+    "description": "Band poster",
     "orientation": "vertical"
   },
   {
     "id": "barika-rise.jpg",
     "type": "design",
-    "title": "",
+    "title": "Barika - Rise",
+    "description": "Album art",
     "orientation": "horizontal"
   },
   {

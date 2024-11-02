@@ -30,6 +30,10 @@ const Image = styled.img`
   object-fit: cover;
   max-width: 70vw;
   max-height: 70vh;
+  @media (max-width: 768px) {
+    max-width: 90vw;
+    max-height: 90vh;
+  }
 `;
 
 export default function MediaGrid({
