@@ -13,10 +13,10 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   metadataBase: new URL("https://jpcandelier.com"),
   title: "JP Candelier - Creative Works",
-  description: "Creative Expressions in Pixels, Notes, and Colors.",
+  description: "Exploring Creativity Through Lens, Sound, and Design.",
   openGraph: {
     title: "JP Candelier - Creative Works",
-    description: "Creative Expressions in Pixels, Notes, and Colors.",
+    description: "Exploring Creativity Through Lens, Sound, and Design.",
     url: "https://jpcandelier.com",
     siteName: "JP Candelier",
     images: [
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "JP Candelier - Creative Works",
-    description: "Creative Expressions in Pixels, Notes, and Colors.",
+    description: "Exploring Creativity Through Lens, Sound, and Design.",
     images: ["/og-image.png"],
   },
 };

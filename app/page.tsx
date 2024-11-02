@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <Heading level={1}>JP Candelier</Heading>
       <Heading level={2} className="heading2">
-        Creative Expressions in Pixels, Notes, and Colors.
+        Exploring Creativity Through Lens, Sound, and Design.
       </Heading>
       <MediaGrid media={mediaData as Media[]} />
     </>
