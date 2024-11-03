@@ -19,7 +19,7 @@ const ModalOverlay = styled.div`
 const ModalContent = styled.div`
   position: relative;
   background-color: white;
-  padding: 1rem 2rem 2rem 2rem;
+  padding: 2rem;
   border-radius: 0.5rem;
 `;
 
