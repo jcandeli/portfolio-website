@@ -4,6 +4,7 @@ import MediaGrid from "@/components/MediaGrid";
 import Heading from "@/components/Heading";
 import mediaData from "@/data/media.json";
 import { Media } from "@/types";
+import { arrangeGrid } from "@/lib/utils";
 
 interface FilterPageProps {
   params: {
@@ -58,13 +59,14 @@ export default function FilterPage({ params }: FilterPageProps) {
         return false;
     }
   });
+  const arrangedMedia = arrangeGrid(filteredMedia);
 
   return (
     <>
       <Heading level={1}>
         {filter.charAt(0).toUpperCase() + filter.slice(1)}
       </Heading>
-      <MediaGrid media={filteredMedia} />
+      <MediaGrid media={arrangedMedia} />
     </>
   );
 }
