@@ -32,7 +32,9 @@
   },
   {
     "type": "music",
-    "id": "602189445"
+    "id": "602189445",
+    "title": "The Villian Enters Chinatown",
+    "filteredOrder": 1
   },
   {
     "type": "photo",
@@ -45,7 +47,8 @@
     "type": "video",
     "title": "Anderson .Paak - Winners circle bass cover",
     "id": "9llqlSpLdRk",
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "filteredOrder": 2
   },
   {
     "type": "photo",
@@ -67,7 +70,8 @@
     "type": "design",
     "title": "Biggie",
     "description": "Digital art",
-    "orientation": "vertical"
+    "orientation": "vertical",
+    "filteredOrder": 1
   },
   {
     "type": "photo",
@@ -81,7 +85,8 @@
     "type": "video",
     "title": "These Walls",
     "id": "X5thM_ze_a4",
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "filteredOrder": 3
   },
   {
     "type": "photo",
@@ -107,7 +112,9 @@
   },
   {
     "type": "music",
-    "id": "927962875"
+    "id": "927962875",
+    "title": "Pepto",
+    "filteredOrder": 4
   },
   {
     "type": "photo",
@@ -152,32 +159,38 @@
     "type": "design",
     "title": "Tyler",
     "description": "Digital art",
-    "orientation": "vertical"
+    "orientation": "vertical",
+    "filteredOrder": 10
   },
   {
     "id": "freshest.jpg",
     "type": "design",
     "title": "The Fresh Establishment",
     "description": "Band poster",
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "filteredOrder": 2
   },
   {
     "type": "music",
-    "id": "599074746"
+    "id": "599074746",
+    "title": "Knockout Ned",
+    "filteredOrder": 5
   },
   {
     "id": "5214247101_fbfca1e0eb_z.jpg",
     "type": "design",
     "title": "N'Goni Dub Trio",
     "description": "Band poster",
-    "orientation": "vertical"
+    "orientation": "vertical",
+    "filteredOrder": 5
   },
   {
     "id": "5195553816_b400ac95ee.jpg",
     "type": "design",
     "title": "Barika",
     "description": "Band poster",
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "filteredOrder": 3
   },
   {
     "type": "photo",
@@ -204,7 +217,9 @@
   },
   {
     "type": "music",
-    "id": "892770742"
+    "id": "892770742",
+    "title": "Flood the Block",
+    "filteredOrder": 8
   },
   {
     "type": "photo",
@@ -233,35 +248,40 @@
     "type": "design",
     "title": "Barika",
     "description": "Band poster",
-    "orientation": "vertical"
+    "orientation": "vertical",
+    "filteredOrder": 7
   },
   {
     "id": "5766888298_90828f76db.jpg",
     "type": "design",
     "title": "Tiffany Pfieffer",
     "description": "Band poster",
-    "orientation": "vertical"
+    "orientation": "vertical",
+    "filteredOrder": 8
   },
   {
     "id": "kina-zore-bishops.jpg",
     "type": "design",
     "title": "Kina Zore",
     "description": "Band poster",
-    "orientation": "vertical"
+    "orientation": "vertical",
+    "filteredOrder": 9
   },
   {
     "id": "invisible homes.jpg",
     "type": "design",
     "title": "Invisible Homes",
     "description": "Album art",
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "filteredOrder": 13
   },
   {
     "id": "49755678801_e20169b22b_k.jpg",
     "type": "design",
     "title": "The Projects",
     "description": "Digital art",
-    "orientation": "vertical"
+    "orientation": "vertical",
+    "filteredOrder": 11
   },
   {
     "type": "photo",
@@ -279,13 +299,16 @@
   },
   {
     "type": "music",
-    "id": "1262846917"
+    "id": "1262846917",
+    "title": "Take your time",
+    "filteredOrder": 9
   },
   {
     "type": "video",
     "title": "Autumn Leaves",
     "id": "tx8BlCl24d4",
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "filteredOrder": 6
   },
   {
     "type": "photo",
@@ -307,7 +330,8 @@
     "type": "video",
     "title": "Kiefer - Why not?",
     "id": "2u8cAGSMFjE",
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "filteredOrder": 7
   },
   {
     "type": "photo",
@@ -344,7 +368,8 @@
     "type": "design",
     "title": "The Projects",
     "description": "Digital art",
-    "orientation": "vertical"
+    "orientation": "vertical",
+    "filteredOrder": 16
   },
   {
     "type": "photo",
@@ -366,31 +391,37 @@
     "type": "design",
     "title": "Barika",
     "description": "Band poster",
-    "orientation": "vertical"
+    "orientation": "vertical",
+    "filteredOrder": 14
   },
   {
     "id": "barika-rise.jpg",
     "type": "design",
     "title": "Barika - Rise",
     "description": "Album art",
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "filteredOrder": 4
   },
   {
     "type": "music",
-    "id": "602189412"
+    "id": "602189412",
+    "title": "Princess",
+    "filteredOrder": 13
   },
   {
     "type": "video",
     "title": "Dilla Day Tribute",
     "id": "aG7NNMmYSk0",
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "filteredOrder": 10
   },
   {
     "id": "49752056731_ef02c496f9_k.jpg",
     "type": "design",
     "title": "The Project Elevator",
     "description": "Digital art",
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "filteredOrder": 6
   },
   {
     "id": "49751522103_937c0337fe_k.jpg",
@@ -404,7 +435,8 @@
     "type": "design",
     "title": "J Dilla Tribute",
     "description": "Band poster",
-    "orientation": "vertical"
+    "orientation": "vertical",
+    "filteredOrder": 12
   },
   {
     "type": "photo",
@@ -432,7 +464,8 @@
     "type": "design",
     "title": "Raja Kasis",
     "description": "Album art",
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "filteredOrder": 15
   },
   {
     "type": "photo",
@@ -444,12 +477,15 @@
   },
   {
     "type": "music",
-    "id": "587898120"
+    "id": "587898120",
+    "title": "Chicken and Waffles",
+    "filteredOrder": 12
   },
   {
     "type": "video",
     "title": "Jorja Smith - On My Mind",
     "id": "hXEyn5RnhUk",
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "filteredOrder": 11
   }
 ]

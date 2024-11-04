@@ -4,7 +4,6 @@ import MediaGrid from "@/components/MediaGrid";
 import Heading from "@/components/Heading";
 import mediaData from "@/data/media.json";
 import { Media } from "@/types";
-import { arrangeGrid } from "@/lib/utils";
 
 interface FilterPageProps {
   params: {
@@ -47,26 +46,33 @@ export default function FilterPage({ params }: FilterPageProps) {
     notFound();
   }
 
-  const filteredMedia = (mediaData as Media[]).filter((item) => {
-    switch (filter.toLowerCase()) {
-      case "photos":
-        return item.type === "photo";
-      case "designs":
-        return item.type === "design";
-      case "music":
-        return item.type === "music" || item.type === "video";
-      default:
-        return false;
-    }
-  });
-  const arrangedMedia = arrangeGrid(filteredMedia);
+  const filteredMedia = (mediaData as Media[])
+    .filter((item) => {
+      switch (filter.toLowerCase()) {
+        case "photos":
+          return item.type === "photo";
+        case "designs":
+          return item.type === "design";
+        case "music":
+          return item.type === "music" || item.type === "video";
+        default:
+          return false;
+      }
+    })
+    .sort((a, b) => {
+      const orderA =
+        "filteredOrder" in a ? Number(a.filteredOrder) || Infinity : Infinity;
+      const orderB =
+        "filteredOrder" in b ? Number(b.filteredOrder) || Infinity : Infinity;
+      return orderA - orderB;
+    });
 
   return (
     <>
       <Heading level={1}>
         {filter.charAt(0).toUpperCase() + filter.slice(1)}
       </Heading>
-      <MediaGrid media={arrangedMedia} />
+      <MediaGrid media={filteredMedia} />
     </>
   );
 }
