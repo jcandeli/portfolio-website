@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { notFound } from "next/navigation";
 import MediaGrid from "@/components/MediaGrid";
 import Heading from "@/components/Heading";
 import mediaData from "@/data/media.json";
@@ -39,6 +40,12 @@ export const generateMetadata = ({ params }: FilterPageProps): Metadata => {
 
 export default function FilterPage({ params }: FilterPageProps) {
   const { filter } = params;
+  const allowedFilters = ["photos", "designs", "music"];
+
+  if (!allowedFilters.includes(filter.toLowerCase())) {
+    notFound();
+  }
+
   const filteredMedia = (mediaData as Media[]).filter((item) => {
     switch (filter.toLowerCase()) {
       case "photos":
@@ -48,7 +55,7 @@ export default function FilterPage({ params }: FilterPageProps) {
       case "music":
         return item.type === "music" || item.type === "video";
       default:
-        return true;
+        return false;
     }
   });
 

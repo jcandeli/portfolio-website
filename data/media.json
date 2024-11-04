@@ -388,19 +388,22 @@
   {
     "id": "49752056731_ef02c496f9_k.jpg",
     "type": "design",
-    "title": "",
+    "title": "The Project Elevator",
+    "description": "Digital art",
     "orientation": "horizontal"
   },
   {
     "id": "49751522103_937c0337fe_k.jpg",
     "type": "design",
-    "title": "",
+    "title": "NYC 1987",
+    "description": "Digital art",
     "orientation": "vertical"
   },
   {
     "id": "5771829677_cd0c44e3a6.jpg",
     "type": "design",
-    "title": "",
+    "title": "J Dilla Tribute",
+    "description": "Band poster",
     "orientation": "vertical"
   },
   {
@@ -427,7 +430,8 @@
   {
     "id": "raja-kasis.jpg",
     "type": "design",
-    "title": "",
+    "title": "Raja Kasis",
+    "description": "Album art",
     "orientation": "horizontal"
   },
   {
