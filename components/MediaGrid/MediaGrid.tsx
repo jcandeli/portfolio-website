@@ -1,13 +1,13 @@
 "use client";
 
 import Grid, { GridItem } from "@/components/Grid";
-import Heading from "@/components/Heading";
 import MediaCard from "@/components/MediaCard";
 import Modal from "@/components/Modal";
 import { Design, Media, Photo } from "@/types";
 import styled from "@emotion/styled";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import MediaDetails from "@/components/MediaDetails/MediaDetails";
 
 const ModalContent = styled.figure`
   display: flex;
@@ -94,11 +94,7 @@ export default function MediaGrid({ media }: { media: Media[] }) {
           >
             <ModalContent>
               <ImageCaption>
-                <Heading level={3}>{selectedMedia.title}</Heading>
-                {"description" in selectedMedia && (
-                  <p>{selectedMedia.description}</p>
-                )}
-                {"camera" in selectedMedia && <p>{selectedMedia.camera}</p>}
+                <MediaDetails media={selectedMedia} />
               </ImageCaption>
               <Image
                 src={`/portfolio/${selectedMedia.type}/${selectedMedia.id}`}

@@ -1,8 +1,7 @@
-import Heading from "@/components/Heading";
 import TitleOverlay from "@/components/TitleOverlay";
 import { Design, Photo } from "@/types";
 import styled from "@emotion/styled";
-import { Camera } from "lucide-react";
+import MediaDetails from "@/components/MediaDetails/MediaDetails";
 
 const ImageContainer = styled.figure`
   position: relative;
@@ -16,30 +15,14 @@ const Image = styled.img`
 `;
 
 const ImageElement = ({ media }: { media: Photo | Design }) => {
-  const { id, type, title } = media;
-  const description = "description" in media ? media.description : undefined;
-  const camera = "camera" in media ? media.camera : undefined;
-
   return (
     <ImageContainer>
-      <Image src={`/portfolio/${type}/${id}`} alt={`${title}`} />
+      <Image
+        src={`/portfolio/${media.type}/${media.id}`}
+        alt={`${media.title}`}
+      />
       <TitleOverlay>
-        <Heading level={3}>{title}</Heading>
-        {description && <p>{description}</p>}
-        {camera && (
-          <p>
-            <Camera
-              size={20}
-              style={{
-                display: "inline-block",
-                marginInline: "0.25rem 0",
-                marginBlock: "-5px 0",
-              }}
-              aria-hidden="true"
-            />
-            <span className="sr-only">Camera used:</span> {camera}
-          </p>
-        )}
+        <MediaDetails media={media} />
       </TitleOverlay>
     </ImageContainer>
   );
