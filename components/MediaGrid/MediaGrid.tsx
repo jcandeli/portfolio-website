@@ -9,11 +9,6 @@ import styled from "@emotion/styled";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const Subheading = styled.h2`
-  font-size: 3rem;
-  line-height: 0.85;
-`;
-
 const ModalContent = styled.figure`
   display: flex;
   flex-direction: column;
@@ -37,17 +32,6 @@ const Image = styled.img`
   }
 `;
 
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.25,
-      delayChildren: 0.5,
-    },
-  },
-};
-
 const item = {
   hidden: {
     opacity: 0,
@@ -64,24 +48,12 @@ const item = {
   },
 };
 
-export default function MediaGrid({
-  media,
-  subheading,
-}: {
-  media: Media[];
-  subheading?: string;
-}) {
+export default function MediaGrid({ media }: { media: Media[] }) {
   const [selectedMedia, setSelectedMedia] = useState<Photo | Design | null>();
 
   return (
     <>
-      {subheading && <Subheading>{subheading}</Subheading>}
-      <Grid
-        as={motion.div}
-        variants={container}
-        initial="hidden"
-        animate="show"
-      >
+      <Grid>
         <AnimatePresence>
           {media.map((media: Media) => (
             <GridItem
