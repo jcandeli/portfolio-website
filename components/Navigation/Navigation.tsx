@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import styled from "@emotion/styled";
 import { ChevronDown } from "lucide-react";
+import FocusTrap from "focus-trap-react";
 
 const NavContainer = styled.nav`
   padding: 1rem 0;
@@ -61,6 +62,7 @@ const ExternalLink = styled.a`
 
 function Navigation() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -70,40 +72,66 @@ function Navigation() {
     setIsDropdownOpen(false);
   };
 
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsDropdownOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <NavContainer aria-label="Main navigation">
       <NavList>
         <NavItem>
-          <DropdownButton
-            onClick={toggleDropdown}
-            aria-haspopup="true"
-            aria-expanded={isDropdownOpen}
+          <FocusTrap
+            active={isDropdownOpen}
+            focusTrapOptions={{
+              escapeDeactivates: true,
+              allowOutsideClick: true,
+            }}
           >
-            Filter
-            <ChevronDown size={16} style={{ marginLeft: "0.25rem" }} />
-          </DropdownButton>
-          <DropdownMenu isOpen={isDropdownOpen}>
-            <NavItem>
-              <NavLink href="/" onClick={closeDropdown}>
-                All
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/photos" onClick={closeDropdown}>
-                Photos
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/designs" onClick={closeDropdown}>
-                Designs
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/music" onClick={closeDropdown}>
-                Music
-              </NavLink>
-            </NavItem>
-          </DropdownMenu>
+            <div ref={dropdownRef}>
+              <DropdownButton
+                onClick={toggleDropdown}
+                aria-haspopup="true"
+                aria-expanded={isDropdownOpen}
+              >
+                Filter
+                <ChevronDown size={16} style={{ marginLeft: "0.25rem" }} />
+              </DropdownButton>
+              <DropdownMenu isOpen={isDropdownOpen}>
+                <NavItem>
+                  <NavLink href="/" onClick={closeDropdown}>
+                    All
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="/photos" onClick={closeDropdown}>
+                    Photos
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="/designs" onClick={closeDropdown}>
+                    Designs
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="/music" onClick={closeDropdown}>
+                    Music
+                  </NavLink>
+                </NavItem>
+              </DropdownMenu>
+            </div>
+          </FocusTrap>
         </NavItem>
         {/* <NavItem>
           <NavLink href="/about">About me</NavLink>

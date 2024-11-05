@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 const TitleOverlay = styled.figcaption`
   text-align: left;
   position: absolute;
-  padding: 36px 0 0 36px;
+  padding: 36px;
   top: 0;
   left: 0;
   width: 100%;
