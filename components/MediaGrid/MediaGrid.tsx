@@ -7,6 +7,7 @@ import Modal from "@/components/Modal";
 import { Design, Media, Photo } from "@/types";
 import styled from "@emotion/styled";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Subheading = styled.h2`
   font-size: 3rem;
@@ -36,6 +37,33 @@ const Image = styled.img`
   }
 `;
 
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.25,
+      delayChildren: 0.5,
+    },
+  },
+};
+
+const item = {
+  hidden: {
+    opacity: 0,
+    y: 40,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      damping: 15,
+      stiffness: 100,
+    },
+  },
+};
+
 export default function MediaGrid({
   media,
   subheading,
@@ -48,33 +76,42 @@ export default function MediaGrid({
   return (
     <>
       {subheading && <Subheading>{subheading}</Subheading>}
-      <Grid>
-        {media.map((media: Media) => (
-          <GridItem
-            key={media.id}
-            orientation={
-              media.type === "photo" ||
-              media.type === "design" ||
-              media.type === "video"
-                ? (media as Photo).orientation
-                : undefined
-            }
-          >
-            {media.type === "photo" || media.type === "design" ? (
-              <button
-                onClick={() => setSelectedMedia(media as Photo | Design)}
-                className="h-full w-full"
-                aria-haspopup="dialog"
-                aria-label={`View ${media.title}`}
-                aria-controls="media-modal"
-              >
+      <Grid
+        as={motion.div}
+        variants={container}
+        initial="hidden"
+        animate="show"
+      >
+        <AnimatePresence>
+          {media.map((media: Media) => (
+            <GridItem
+              as={motion.div}
+              key={media.id}
+              variants={item}
+              orientation={
+                media.type === "photo" ||
+                media.type === "design" ||
+                media.type === "video"
+                  ? (media as Photo).orientation
+                  : undefined
+              }
+            >
+              {media.type === "photo" || media.type === "design" ? (
+                <button
+                  onClick={() => setSelectedMedia(media as Photo | Design)}
+                  className="h-full w-full"
+                  aria-haspopup="dialog"
+                  aria-label={`View ${media.title}`}
+                  aria-controls="media-modal"
+                >
+                  <MediaCard media={media} />
+                </button>
+              ) : (
                 <MediaCard media={media} />
-              </button>
-            ) : (
-              <MediaCard media={media} />
-            )}
-          </GridItem>
-        ))}
+              )}
+            </GridItem>
+          ))}
+        </AnimatePresence>
 
         {selectedMedia && (
           <Modal
