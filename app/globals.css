@@ -9,6 +9,10 @@ body {
   padding: 1rem 2rem;
 }
 
+a {
+  text-decoration: underline;
+}
+
 a:focus, button:focus, a:focus-visible,
 button:focus-visible {
   outline: 2px dashed currentColor;
@@ -16,8 +20,25 @@ button:focus-visible {
 }
 
 @media (max-width: 768px) {
-  .heading2 {
+  .h2 {
     line-height: 0.85 !important;
     margin-top: 0.5rem !important;
   }
 }
+
+@media (max-width: 662px) {
+  .h1 {
+    font-size: 24vw !important;
+  }
+}
+@media (max-width: 465px) {
+  .h1 {
+    font-size: 23vw !important;
+  }
+}
+@media (max-width: 359px) {
+  .h1 {
+    font-size: 22vw !important;
+  }
+}
+

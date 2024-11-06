@@ -10,6 +10,7 @@ const GridItem: StyledComponent<"div", any, GridItemProps> = styled.div`
   grid-column: span 1;
   grid-row: span 1;
   width: 100%;
+  background-color: #dfdfdf;
 
   @media (min-width: 768px) {
     grid-column: span

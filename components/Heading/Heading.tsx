@@ -19,7 +19,7 @@ const getHeadingStyle = (level: number) => {
     } as const;
   } else if (level === 2) {
     return {
-      fontSize: "min(8vw, 4rem)",
+      fontSize: "min(5.25vw, 4.6rem)",
       lineHeight: "1.2",
       position: "relative",
       zIndex: 1,
