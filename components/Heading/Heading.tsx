@@ -9,29 +9,30 @@ const bebasNeue = Bebas_Neue({
 });
 
 const getHeadingStyle = (level: number) => {
+  const baseStyle = {
+    position: "relative" as const,
+    lineHeight: "0.85",
+    textWrap: "pretty",
+  };
+
   if (level === 1) {
     return {
-      fontSize: "min(25vw, 348px)",
-      lineHeight: "0.85",
+      ...baseStyle,
+      fontSize: "min(24.5vw, 348px)",
       letterSpacing: "max(-1vw, -0.5rem)",
-      position: "relative",
-      zIndex: 1,
     } as const;
   } else if (level === 2) {
     return {
-      fontSize: "min(5.25vw, 4.6rem)",
+      ...baseStyle,
+      fontSize: "clamp(2.5rem, 5.25vw, 4.6rem)",
       lineHeight: "1.2",
-      position: "relative",
-      zIndex: 1,
       marginTop: "-1rem",
       marginBottom: "1rem",
     } as const;
   } else if (level === 3) {
     return {
+      ...baseStyle,
       fontSize: "4rem",
-      lineHeight: "0.85",
-      position: "relative",
-      zIndex: 1,
     } as const;
   }
   return {};

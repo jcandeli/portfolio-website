@@ -12,7 +12,7 @@ const ModalOverlay = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  backdrop-filter: blur(32px);
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: 9999;
 `;
 
@@ -21,6 +21,7 @@ const ModalContent = styled.div`
   background-color: white;
   padding: 2rem;
   border-radius: 0.5rem;
+  box-shadow: 0px 2px 6px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
 `;
 
 const CloseButton = styled.button`
