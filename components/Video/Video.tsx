@@ -12,8 +12,8 @@ const VideoIcon = styled.img`
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 200px;
-  height: 200px;
+  width: 50%;
+  height: 50%;
   opacity: 60%;
 `;
 
