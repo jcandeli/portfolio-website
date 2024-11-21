@@ -88,35 +88,35 @@ export default function MediaGrid({ media }: { media: Media[] }) {
             </GridItem>
           ))}
         </AnimatePresence>
-      </Grid>
 
-      {selectedMedia && (
-        <Modal
-          isOpen
-          onClose={() => setSelectedMedia(null)}
-          aria-label={`${selectedMedia.title} details`}
-          id="media-modal"
-        >
-          <ModalContent>
-            {selectedMedia.type === "video" ? (
-              <VideoFrame
-                title="YouTube Video Player"
-                src={`https://www.youtube.com/embed/${selectedMedia.id}?autoplay=1`}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            ) : (
-              <Image
-                src={`/portfolio/${selectedMedia.type}/${selectedMedia.id}`}
-                alt={`${selectedMedia.title}`}
-              />
-            )}
-            <ImageCaption>
-              <MediaDetails media={selectedMedia} />
-            </ImageCaption>
-          </ModalContent>
-        </Modal>
-      )}
+        {selectedMedia && (
+          <Modal
+            isOpen
+            onClose={() => setSelectedMedia(null)}
+            aria-label={`${selectedMedia.title} details`}
+            id="media-modal"
+          >
+            <ModalContent>
+              {selectedMedia.type === "video" ? (
+                <VideoFrame
+                  title="YouTube Video Player"
+                  src={`https://www.youtube.com/embed/${selectedMedia.id}?autoplay=1`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              ) : (
+                <Image
+                  src={`/portfolio/${selectedMedia.type}/${selectedMedia.id}`}
+                  alt={`${selectedMedia.title}`}
+                />
+              )}
+              <ImageCaption>
+                <MediaDetails media={selectedMedia} />
+              </ImageCaption>
+            </ModalContent>
+          </Modal>
+        )}
+      </Grid>
     </>
   );
 }

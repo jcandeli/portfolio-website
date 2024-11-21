@@ -5,16 +5,17 @@ import { Media } from "@/types";
 
 interface MediaCardProps {
   media: Media;
+  showOverlay?: boolean;
 }
 
-const MediaCard = ({ media }: MediaCardProps) => {
+const MediaCard = ({ media, showOverlay = true }: MediaCardProps) => {
   switch (media.type) {
     case "video":
       return <Video media={media} />;
     case "photo":
     case "design":
       // eslint-disable-next-line jsx-a11y/alt-text
-      return <Image media={media} />;
+      return <Image media={media} showOverlay={showOverlay} />;
     case "music":
       return <Audio id={media.id} />;
     default:

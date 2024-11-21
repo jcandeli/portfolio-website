@@ -1,10 +1,17 @@
 import Heading from "@/components/Heading";
 import { Design, Photo, Video } from "@/types";
 import { Camera } from "lucide-react";
+import styled from "@emotion/styled";
 
 interface MediaDetailsProps {
   media: Photo | Design | Video;
 }
+
+const StyledCamera = styled(Camera)`
+  display: inline-block;
+  margin-inline: 0.25rem 0;
+  margin-block: -5px 0;
+`;
 
 export default function MediaDetails({ media }: MediaDetailsProps) {
   const { title } = media;
@@ -17,15 +24,7 @@ export default function MediaDetails({ media }: MediaDetailsProps) {
       {description && <p>{description}</p>}
       {camera && (
         <p>
-          <Camera
-            size={20}
-            style={{
-              display: "inline-block",
-              marginInline: "0.25rem 0",
-              marginBlock: "-5px 0",
-            }}
-            aria-hidden="true"
-          />
+          <StyledCamera size={20} aria-hidden="true" />
           <span className="sr-only">Camera used:</span> {camera}
         </p>
       )}

@@ -14,16 +14,23 @@ const Image = styled.img`
   height: 100%;
 `;
 
-const ImageElement = ({ media }: { media: Photo | Design }) => {
+interface ImageElementProps {
+  media: Photo | Design;
+  showOverlay?: boolean;
+}
+
+const ImageElement = ({ media, showOverlay = true }: ImageElementProps) => {
   return (
     <ImageContainer>
       <Image
         src={`/portfolio/${media.type}/${media.id}`}
         alt={`${media.title}`}
       />
-      <TitleOverlay>
-        <MediaDetails media={media} />
-      </TitleOverlay>
+      {showOverlay && (
+        <TitleOverlay>
+          <MediaDetails media={media} />
+        </TitleOverlay>
+      )}
     </ImageContainer>
   );
 };
