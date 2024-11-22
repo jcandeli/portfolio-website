@@ -20,6 +20,7 @@ const ImageCaption = styled.figcaption`
   width: 75%;
   align-self: flex-start;
   margin-block: 0 2rem;
+  padding: 2rem;
 `;
 
 const Image = styled.img`
@@ -94,13 +95,13 @@ export default function MediaGrid({ media }: { media: Media[] }) {
           id="media-modal"
         >
           <ModalContent>
-            <ImageCaption>
-              <MediaDetails media={selectedMedia} />
-            </ImageCaption>
             <Image
               src={`/portfolio/${selectedMedia.type}/${selectedMedia.id}`}
               alt={`${selectedMedia.title}`}
             />
+            <ImageCaption>
+              <MediaDetails media={selectedMedia} />
+            </ImageCaption>
           </ModalContent>
         </Modal>
       )}

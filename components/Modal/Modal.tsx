@@ -19,19 +19,18 @@ const ModalOverlay = styled.div`
 const ModalContent = styled.div`
   position: relative;
   background-color: white;
-  padding: 2rem;
-  border-radius: 0.5rem;
   box-shadow: 0px 2px 6px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
 `;
 
 const CloseButton = styled.button`
   position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  background: none;
+  top: -3rem;
+  right: 0;
   border: none;
   cursor: pointer;
   padding: 0.5rem;
+  background-color: rgba(128, 128, 128, 0.5);
+  color: #fff;
 `;
 
 interface ModalProps {
@@ -68,6 +67,7 @@ const Modal = ({ isOpen, onClose, children, id }: ModalProps) => {
       focusTrapOptions={{
         escapeDeactivates: false,
         allowOutsideClick: true,
+        initialFocus: false,
       }}
     >
       <ModalOverlay
