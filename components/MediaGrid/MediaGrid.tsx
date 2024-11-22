@@ -25,12 +25,8 @@ const ImageCaption = styled.figcaption`
 
 const Image = styled.img`
   object-fit: cover;
-  max-width: 70vw;
-  max-height: 70vh;
-  @media (max-width: 768px) {
-    max-width: 90vw;
-    max-height: 90vh;
-  }
+  max-width: min(90vw, 1200px);
+  max-height: 80vh;
 `;
 
 const item = {
