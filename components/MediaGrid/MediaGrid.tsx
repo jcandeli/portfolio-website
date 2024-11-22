@@ -84,26 +84,26 @@ export default function MediaGrid({ media }: { media: Media[] }) {
             </GridItem>
           ))}
         </AnimatePresence>
-
-        {selectedMedia && (
-          <Modal
-            isOpen
-            onClose={() => setSelectedMedia(null)}
-            aria-label={`${selectedMedia.title} details`}
-            id="media-modal"
-          >
-            <ModalContent>
-              <ImageCaption>
-                <MediaDetails media={selectedMedia} />
-              </ImageCaption>
-              <Image
-                src={`/portfolio/${selectedMedia.type}/${selectedMedia.id}`}
-                alt={`${selectedMedia.title}`}
-              />
-            </ModalContent>
-          </Modal>
-        )}
       </Grid>
+
+      {selectedMedia && (
+        <Modal
+          isOpen
+          onClose={() => setSelectedMedia(null)}
+          aria-label={`${selectedMedia.title} details`}
+          id="media-modal"
+        >
+          <ModalContent>
+            <ImageCaption>
+              <MediaDetails media={selectedMedia} />
+            </ImageCaption>
+            <Image
+              src={`/portfolio/${selectedMedia.type}/${selectedMedia.id}`}
+              alt={`${selectedMedia.title}`}
+            />
+          </ModalContent>
+        </Modal>
+      )}
     </>
   );
 }
