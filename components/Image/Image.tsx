@@ -2,16 +2,16 @@ import TitleOverlay from "@/components/TitleOverlay";
 import { Design, Photo } from "@/types";
 import styled from "@emotion/styled";
 import MediaDetails from "@/components/MediaDetails/MediaDetails";
+import NextImage from "next/image";
 
 const ImageContainer = styled.figure`
   position: relative;
   height: 100%;
+  width: 100%;
 `;
 
-const Image = styled.img`
+const Image = styled(NextImage)`
   object-fit: cover;
-  width: 100%;
-  height: 100%;
 `;
 
 const ImageElement = ({ media }: { media: Photo | Design }) => {
@@ -20,6 +20,9 @@ const ImageElement = ({ media }: { media: Photo | Design }) => {
       <Image
         src={`/portfolio/${media.type}/${media.id}`}
         alt={`${media.title}`}
+        fill
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        priority={false}
       />
       <TitleOverlay>
         <MediaDetails media={media} />
