@@ -45,7 +45,8 @@
   },
   {
     "type": "video",
-    "title": "Anderson .Paak - Winners circle bass cover",
+    "title": "Anderson .Paak - Winners Circle",
+    "description": "Bass cover",
     "id": "9llqlSpLdRk",
     "orientation": "horizontal",
     "filteredOrder": 2
@@ -84,6 +85,7 @@
   {
     "type": "video",
     "title": "These Walls",
+    "description": "Jazz cover",
     "id": "X5thM_ze_a4",
     "orientation": "horizontal",
     "filteredOrder": 3
@@ -306,6 +308,7 @@
   {
     "type": "video",
     "title": "Autumn Leaves",
+    "description": "Jazz cover",
     "id": "tx8BlCl24d4",
     "orientation": "horizontal",
     "filteredOrder": 6
@@ -410,8 +413,9 @@
   },
   {
     "type": "video",
-    "title": "Dilla Day Tribute",
-    "id": "aG7NNMmYSk0",
+    "title": "Carrtoons - Vamp",
+    "description": "Bass cover",
+    "id": "-yZ6-Hu39Bs",
     "orientation": "horizontal",
     "filteredOrder": 10
   },
@@ -447,9 +451,10 @@
   },
   {
     "type": "video",
-    "title": "Slum Village - 2U4U",
-    "id": "mpcZOL9FwlA",
-    "orientation": "horizontal"
+    "title": "Jorja Smith - On My Mind",
+    "id": "hXEyn5RnhUk",
+    "orientation": "horizontal",
+    "filteredOrder": 11
   },
   {
     "type": "photo",
@@ -483,9 +488,9 @@
   },
   {
     "type": "video",
-    "title": "Jorja Smith - On My Mind",
-    "id": "hXEyn5RnhUk",
-    "orientation": "horizontal",
-    "filteredOrder": 11
+    "title": "ATC - Excursions",
+    "description": "Bass cover",
+    "id": "Ew2odS9VluM",
+    "orientation": "horizontal"
   }
 ]

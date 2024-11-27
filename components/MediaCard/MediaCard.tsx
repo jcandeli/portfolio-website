@@ -10,7 +10,7 @@ interface MediaCardProps {
 const MediaCard = ({ media }: MediaCardProps) => {
   switch (media.type) {
     case "video":
-      return <Video id={media.id} title={media.title} />;
+      return <Video media={media} />;
     case "photo":
     case "design":
       // eslint-disable-next-line jsx-a11y/alt-text

@@ -73,15 +73,19 @@ export default function MediaGrid({ media }: { media: Media[] }) {
                   : undefined
               }
             >
-              <button
-                onClick={() => setSelectedMedia(media)}
-                className="h-full w-full"
-                aria-haspopup="dialog"
-                aria-label={`View ${media.title}`}
-                aria-controls="media-modal"
-              >
+              {media.type === "music" ? (
                 <MediaCard media={media} />
-              </button>
+              ) : (
+                <button
+                  onClick={() => setSelectedMedia(media)}
+                  className="h-full w-full"
+                  aria-haspopup="dialog"
+                  aria-label={`View ${media.title}`}
+                  aria-controls="media-modal"
+                >
+                  <MediaCard media={media} />
+                </button>
+              )}
             </GridItem>
           ))}
         </AnimatePresence>

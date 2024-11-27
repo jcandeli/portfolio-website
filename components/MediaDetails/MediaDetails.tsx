@@ -1,9 +1,9 @@
 import Heading from "@/components/Heading";
-import { Design, Photo } from "@/types";
+import { Design, Photo, Video } from "@/types";
 import { Camera } from "lucide-react";
 
 interface MediaDetailsProps {
-  media: Photo | Design;
+  media: Photo | Design | Video;
 }
 
 export default function MediaDetails({ media }: MediaDetailsProps) {

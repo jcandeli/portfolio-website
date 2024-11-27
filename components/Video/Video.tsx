@@ -1,11 +1,7 @@
 import styled from "@emotion/styled";
 import TitleOverlay from "@/components/TitleOverlay";
-import Heading from "../Heading";
-
-interface VideoProps {
-  id: string;
-  title: string | undefined;
-}
+import MediaDetails from "../MediaDetails/MediaDetails";
+import { Video } from "@/types";
 
 const VideoIcon = styled.img`
   position: absolute;
@@ -33,19 +29,19 @@ const ImageElement = styled.img`
   height: 100%;
 `;
 
-const Video = ({ id, title }: VideoProps) => {
+const VideoComponent = ({ media }: { media: Video }) => {
   return (
     <ImageContainer>
       <ImageElement
-        src={`https://img.youtube.com/vi/${id}/maxresdefault.jpg`}
+        src={`https://img.youtube.com/vi/${media.id}/maxresdefault.jpg`}
         alt="Video Thumbnail"
       />
       <TitleOverlay>
-        <Heading level={3}>{title}</Heading>
+        <MediaDetails media={media} />
       </TitleOverlay>
       <VideoIcon src="video-icon.svg" alt="Play Video" />
     </ImageContainer>
   );
 };
 
-export default Video;
+export default VideoComponent;
