@@ -1,6 +1,6 @@
-import { useState } from "react";
 import styled from "@emotion/styled";
 import TitleOverlay from "@/components/TitleOverlay";
+import Heading from "../Heading";
 
 interface VideoProps {
   id: string;
@@ -34,40 +34,17 @@ const ImageElement = styled.img`
 `;
 
 const Video = ({ id, title }: VideoProps) => {
-  const [showPlayer, setShowPlayer] = useState(false);
-
-  const handleClick = () => {
-    setShowPlayer(true);
-  };
-
   return (
-    <>
-      {!showPlayer && (
-        <ImageContainer>
-          <ImageElement
-            src={`https://img.youtube.com/vi/${id}/maxresdefault.jpg`}
-            alt="Video Thumbnail"
-          />
-          <TitleOverlay onClick={handleClick}>{title}</TitleOverlay>
-          <VideoIcon
-            onClick={handleClick}
-            src="video-icon.svg"
-            alt="Play Video"
-          />
-        </ImageContainer>
-      )}
-      {showPlayer && (
-        <iframe
-          title="YouTube Video Player"
-          width="100%"
-          height="100%"
-          src={`https://www.youtube.com/embed/${id}?autoplay=1`}
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
-      )}
-    </>
+    <ImageContainer>
+      <ImageElement
+        src={`https://img.youtube.com/vi/${id}/maxresdefault.jpg`}
+        alt="Video Thumbnail"
+      />
+      <TitleOverlay>
+        <Heading level={3}>{title}</Heading>
+      </TitleOverlay>
+      <VideoIcon src="video-icon.svg" alt="Play Video" />
+    </ImageContainer>
   );
 };
 

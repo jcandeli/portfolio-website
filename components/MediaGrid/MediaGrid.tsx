@@ -3,7 +3,7 @@
 import Grid, { GridItem } from "@/components/Grid";
 import MediaCard from "@/components/MediaCard";
 import Modal from "@/components/Modal";
-import { Design, Media, Photo } from "@/types";
+import { Design, Media, Photo, Video } from "@/types";
 import styled from "@emotion/styled";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -29,6 +29,12 @@ const Image = styled.img`
   max-height: 80vh;
 `;
 
+const VideoFrame = styled.iframe`
+  width: min(90vw, 1200px);
+  height: min(80vh, calc(90vw * 9 / 16));
+  max-width: 100%;
+`;
+
 const item = {
   hidden: {
     opacity: 0,
@@ -46,7 +52,9 @@ const item = {
 };
 
 export default function MediaGrid({ media }: { media: Media[] }) {
-  const [selectedMedia, setSelectedMedia] = useState<Photo | Design | null>();
+  const [selectedMedia, setSelectedMedia] = useState<
+    Photo | Design | Video | null
+  >();
 
   return (
     <>
@@ -65,19 +73,15 @@ export default function MediaGrid({ media }: { media: Media[] }) {
                   : undefined
               }
             >
-              {media.type === "photo" || media.type === "design" ? (
-                <button
-                  onClick={() => setSelectedMedia(media as Photo | Design)}
-                  className="h-full w-full"
-                  aria-haspopup="dialog"
-                  aria-label={`View ${media.title}`}
-                  aria-controls="media-modal"
-                >
-                  <MediaCard media={media} />
-                </button>
-              ) : (
+              <button
+                onClick={() => setSelectedMedia(media)}
+                className="h-full w-full"
+                aria-haspopup="dialog"
+                aria-label={`View ${media.title}`}
+                aria-controls="media-modal"
+              >
                 <MediaCard media={media} />
-              )}
+              </button>
             </GridItem>
           ))}
         </AnimatePresence>
@@ -91,10 +95,19 @@ export default function MediaGrid({ media }: { media: Media[] }) {
           id="media-modal"
         >
           <ModalContent>
-            <Image
-              src={`/portfolio/${selectedMedia.type}/${selectedMedia.id}`}
-              alt={`${selectedMedia.title}`}
-            />
+            {selectedMedia.type === "video" ? (
+              <VideoFrame
+                title="YouTube Video Player"
+                src={`https://www.youtube.com/embed/${selectedMedia.id}?autoplay=1`}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            ) : (
+              <Image
+                src={`/portfolio/${selectedMedia.type}/${selectedMedia.id}`}
+                alt={`${selectedMedia.title}`}
+              />
+            )}
             <ImageCaption>
               <MediaDetails media={selectedMedia} />
             </ImageCaption>
