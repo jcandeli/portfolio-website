@@ -19,19 +19,18 @@ const ModalContent = styled.figure`
 const ImageCaption = styled.figcaption`
   width: 75%;
   align-self: flex-start;
-  margin-block: 0 2rem;
   padding: 2rem;
 `;
 
 const Image = styled.img`
   object-fit: cover;
   max-width: min(90vw, 1200px);
-  max-height: 80vh;
+  max-height: 70vh;
 `;
 
 const VideoFrame = styled.iframe`
   width: min(90vw, 1200px);
-  height: min(80vh, calc(90vw * 9 / 16));
+  height: min(70vh, calc(90vw * 9 / 16));
   max-width: 100%;
 `;
 
