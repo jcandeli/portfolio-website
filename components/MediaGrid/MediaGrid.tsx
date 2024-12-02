@@ -5,9 +5,10 @@ import MediaCard from "@/components/MediaCard";
 import Modal from "@/components/Modal";
 import { Design, Media, Photo, Video } from "@/types";
 import styled from "@emotion/styled";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import MediaDetails from "@/components/MediaDetails/MediaDetails";
+import { createMediaDetailsUrl } from "@/utils/url";
 
 const ModalContent = styled.figure`
   display: flex;
@@ -55,6 +56,35 @@ export default function MediaGrid({ media }: { media: Media[] }) {
     Photo | Design | Video | null
   >();
 
+  // Handle browser back/forward buttons
+  useEffect(() => {
+    const handlePopState = () => {
+      setSelectedMedia(null);
+    };
+
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, []);
+
+  const handleMediaClick = (media: Media) => {
+    if (
+      media.type === "photo" ||
+      media.type === "design" ||
+      media.type === "video"
+    ) {
+      setSelectedMedia(media);
+      // Update URL without redirecting
+      const newUrl = createMediaDetailsUrl(media.type, media.title, media.id);
+      window.history.pushState({}, "", newUrl);
+    }
+  };
+
+  const handleCloseModal = () => {
+    setSelectedMedia(null);
+    // Restore the original URL when closing the modal
+    window.history.pushState({}, "", window.location.pathname);
+  };
+
   return (
     <>
       <Grid>
@@ -76,7 +106,7 @@ export default function MediaGrid({ media }: { media: Media[] }) {
                 <MediaCard media={media} />
               ) : (
                 <button
-                  onClick={() => setSelectedMedia(media)}
+                  onClick={() => handleMediaClick(media)}
                   className="h-full w-full"
                   aria-haspopup="dialog"
                   aria-label={`View ${media.title}`}
@@ -92,7 +122,7 @@ export default function MediaGrid({ media }: { media: Media[] }) {
         {selectedMedia && (
           <Modal
             isOpen
-            onClose={() => setSelectedMedia(null)}
+            onClose={handleCloseModal}
             aria-label={`${selectedMedia.title} details`}
             id="media-modal"
           >

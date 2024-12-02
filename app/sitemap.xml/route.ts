@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import allMedia from "@/data/media.json";
+import { createMediaDetailsUrl } from "@/utils/url";
 
 export async function GET() {
   const baseUrl = "https://jpcandelier.com";
@@ -11,9 +12,7 @@ export async function GET() {
   }));
 
   const dynamicPages = allMedia.map((item) => ({
-    url: `${baseUrl}/details/${item.type}/${item.title
-      .toLowerCase()
-      .replace(/\s+/g, "-")}--${item.id}`,
+    url: `${baseUrl}${createMediaDetailsUrl(item.type, item.title, item.id)}`,
   }));
 
   const sitemap = [...staticPages, ...dynamicPages];

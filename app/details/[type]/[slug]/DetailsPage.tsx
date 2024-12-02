@@ -2,13 +2,12 @@
 
 import Link from "next/link";
 import styled from "@emotion/styled";
-import { Media } from "@/types";
-import MediaDetails from "@/components/MediaDetails";
+import { Design, Photo, Video } from "@/types";
 import MediaCard from "@/components/MediaCard";
 
 interface DetailsPageProps {
-  mediaItem: Media;
-  type: string;
+  mediaItem: Photo | Design | Video;
+  type: "photo" | "design" | "video";
 }
 
 const BackLink = styled(Link)`
@@ -25,13 +24,13 @@ const BackLink = styled(Link)`
 `;
 
 export function DetailsPage({ mediaItem, type }: DetailsPageProps) {
-  const mediaType = type === "video" || type === "music" ? "music" : `${type}s`;
+  const mediaType = type === "video" ? "video" : `${type}s`;
+
   return (
     <div>
       <BackLink href={`/${mediaType.toLowerCase()}`}>
         ← {mediaType.toUpperCase()}
       </BackLink>
-      <MediaDetails media={mediaItem} />
       <MediaCard media={mediaItem} showOverlay={false} />
     </div>
   );

@@ -5,7 +5,7 @@
  * @returns Formatted slug string
  */
 export function createMediaSlug(title: string, id: string) {
-  return `${title.toLowerCase().replace(/\s+/g, "-")}--${id}`;
+  return `${title.toLowerCase().replace(/\s+/g, "-")}.__id-${id}`;
 }
 
 /**
@@ -22,10 +22,10 @@ export function createMediaDetailsUrl(type: string, title: string, id: string) {
 
 /**
  * Extracts the ID from a media slug
- * @param slug The URL slug (format: "title-goes-here--123")
+ * @param slug The URL slug (format: "title-goes-here.__id-123")
  * @returns The extracted ID
  */
 export function extractIdFromSlug(slug: string) {
-  const [, id] = slug.split("--");
+  const [, id] = slug.split(".__id-");
   return id;
 }

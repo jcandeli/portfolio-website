@@ -1,18 +1,21 @@
+import { describe, expect, it } from "@jest/globals";
 import {
   createMediaSlug,
   createMediaDetailsUrl,
   extractIdFromSlug,
-} from "../url";
+} from "./url";
 
 describe("URL utilities", () => {
   describe("createMediaSlug", () => {
     it("should create a valid slug from title and id", () => {
-      expect(createMediaSlug("Hello World", "123")).toBe("hello-world--123");
-      expect(createMediaSlug("Multiple   Spaces", "456")).toBe(
-        "multiple-spaces--456"
+      expect(createMediaSlug("Hello World", "123")).toBe(
+        "hello-world.__id-123"
       );
-      expect(createMediaSlug("Special!@#$Characters", "789")).toBe(
-        "special!@#$characters--789"
+      expect(createMediaSlug("Multiple   Spaces", "456")).toBe(
+        "multiple-spaces.__id-456"
+      );
+      expect(createMediaSlug("Title with --- dashes", "789")).toBe(
+        "title-with----dashes.__id-789"
       );
     });
   });
@@ -27,8 +30,8 @@ describe("URL utilities", () => {
 
   describe("extractIdFromSlug", () => {
     it("should extract ID from slug", () => {
-      expect(extractIdFromSlug("hello-world--123")).toBe("123");
-      expect(extractIdFromSlug("complex-title-with-dashes--456")).toBe("456");
+      expect(extractIdFromSlug("hello-world.__id-123")).toBe("123");
+      expect(extractIdFromSlug("title-with----dashes.__id-456")).toBe("456");
     });
   });
 });
