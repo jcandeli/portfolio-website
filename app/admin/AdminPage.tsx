@@ -24,19 +24,14 @@ const JsonTextarea = styled.textarea`
   margin-top: 2rem;
 `;
 
-const item = {
-  hidden: { opacity: 0, y: 40 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { type: "spring", damping: 15, stiffness: 100 },
-  },
-};
-
 export default function AdminPage() {
   const [mediaItems, setMediaItems] = useState<Media[]>(mediaData as Media[]);
 
-  const handleDragStart = (e: DragEvent<HTMLDivElement>, index: number) => {
+  const handleDragStart = (
+    e: MouseEvent | TouchEvent | PointerEvent,
+    index: number
+  ) => {
+    // @ts-expect-error dataTransfer is not available on all event types
     e.dataTransfer.setData("text/plain", index.toString());
   };
 
@@ -75,17 +70,14 @@ export default function AdminPage() {
               <GridItem
                 key={item.id}
                 orientation={
-                  item.type === "photo" ||
-                  item.type === "design" ||
-                  item.type === "video"
+                  item.type === "photo" || item.type === "design"
                     ? item.orientation
                     : undefined
                 }
               >
                 <DraggableItem
-                  variants={item}
                   draggable
-                  onDragStart={(e: DragEvent<HTMLDivElement>) =>
+                  onDragStart={(e: MouseEvent | TouchEvent | PointerEvent) =>
                     handleDragStart(e, index)
                   }
                   onDragOver={handleDragOver}
