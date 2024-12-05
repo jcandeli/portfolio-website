@@ -24,7 +24,7 @@ const getHeadingStyle = (level: number) => {
   } else if (level === 2) {
     return {
       ...baseStyle,
-      fontSize: "clamp(2.5rem, 5.25vw, 4.6rem)",
+      fontSize: "clamp(2rem, 4vw, 3.5rem)",
       lineHeight: "1.2",
       marginTop: "-1rem",
       marginBottom: "1rem",
