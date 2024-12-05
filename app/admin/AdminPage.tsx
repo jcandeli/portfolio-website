@@ -6,15 +6,16 @@ import { Media } from "@/types";
 import Grid, { GridItem } from "@/components/Grid";
 import MediaCard from "@/components/MediaCard";
 import mediaData from "@/data/media.json";
+import { motion, AnimatePresence } from "framer-motion";
 
 const AdminContainer = styled.div`
   padding: 2rem;
 `;
 
-const DraggableItem = styled(GridItem)`
+const DraggableItem = styled(motion.div)`
   cursor: move;
-  border: 1px solid #ccc;
-  padding: 0.5rem;
+  height: 100%;
+  width: 100%;
 `;
 
 const JsonTextarea = styled.textarea`
@@ -22,6 +23,15 @@ const JsonTextarea = styled.textarea`
   height: 200px;
   margin-top: 2rem;
 `;
+
+const item = {
+  hidden: { opacity: 0, y: 40 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring", damping: 15, stiffness: 100 },
+  },
+};
 
 export default function AdminPage() {
   const [mediaItems, setMediaItems] = useState<Media[]>(mediaData as Media[]);
@@ -60,21 +70,36 @@ export default function AdminPage() {
       <button onClick={handleRandomize}>Randomize Order</button>
       <div style={{ marginTop: "1rem" }}>
         <Grid>
-          {mediaItems.map((item, index) => (
-            <DraggableItem
-              key={item.id}
-              draggable
-              onDragStart={(e: DragEvent<HTMLDivElement>) =>
-                handleDragStart(e, index)
-              }
-              onDragOver={handleDragOver}
-              onDrop={(e: DragEvent<HTMLDivElement>) => handleDrop(e, index)}
-            >
-              <GridItem {...item}>
-                <MediaCard media={item} />
+          <AnimatePresence>
+            {mediaItems.map((item, index) => (
+              <GridItem
+                key={item.id}
+                orientation={
+                  item.type === "photo" ||
+                  item.type === "design" ||
+                  item.type === "video"
+                    ? item.orientation
+                    : undefined
+                }
+              >
+                <DraggableItem
+                  variants={item}
+                  draggable
+                  onDragStart={(e: DragEvent<HTMLDivElement>) =>
+                    handleDragStart(e, index)
+                  }
+                  onDragOver={handleDragOver}
+                  onDrop={(e: DragEvent<HTMLDivElement>) =>
+                    handleDrop(e, index)
+                  }
+                >
+                  <div className="h-full w-full">
+                    <MediaCard media={item} />
+                  </div>
+                </DraggableItem>
               </GridItem>
-            </DraggableItem>
-          ))}
+            ))}
+          </AnimatePresence>
         </Grid>
       </div>
       <JsonTextarea value={JSON.stringify(mediaItems, null, 2)} readOnly />
