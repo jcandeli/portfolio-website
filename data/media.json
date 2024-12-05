@@ -1,14 +1,6 @@
 [
   {
     "type": "photo",
-    "id": "23229339384_b184c5b0d0_b.jpg",
-    "title": "Lanterns",
-    "camera": "Nikon D90",
-    "description": "Hoi An, Vietnam",
-    "orientation": "banner"
-  },
-  {
-    "type": "photo",
     "id": "3299396187_97ccd37f7b_b.jpg",
     "title": "Multiple Exposure",
     "description": "Mae Hong Son, Thailand",
@@ -23,12 +15,12 @@
     "orientation": "horizontal"
   },
   {
-    "type": "photo",
-    "id": "23535846656_48036a1eb3_b.jpg",
-    "title": "Sue",
-    "description": "Hoi An, Vietnam",
-    "camera": "Nikon D750",
-    "orientation": "vertical"
+    "id": "biggie.jpg",
+    "type": "design",
+    "title": "Biggie",
+    "description": "Digital art",
+    "orientation": "vertical",
+    "filteredOrder": 1
   },
   {
     "type": "music",
@@ -38,10 +30,10 @@
   },
   {
     "type": "photo",
-    "id": "190747690_73868f6030_o.jpg",
-    "title": "Dominican Rider",
-    "description": "Dominican Republic",
-    "camera": "Holga"
+    "id": "3449012140_ebfbc1a8dc_b.jpg",
+    "title": "Myra Flynn",
+    "description": "Burlington, Vermont",
+    "camera": "Kiev 60TTL"
   },
   {
     "type": "video",
@@ -53,13 +45,6 @@
   },
   {
     "type": "photo",
-    "id": "3449012140_ebfbc1a8dc_b.jpg",
-    "title": "Myra Flynn",
-    "description": "Burlington, Vermont",
-    "camera": "Kiev 60TTL"
-  },
-  {
-    "type": "photo",
     "id": "6300318366_0ef0aa65de_b.jpg",
     "title": "Hermosa",
     "description": "Los Angeles",
@@ -67,36 +52,35 @@
     "orientation": "block"
   },
   {
-    "id": "biggie.jpg",
+    "id": "5214247101_fbfca1e0eb_z.jpg",
     "type": "design",
-    "title": "Biggie",
-    "description": "Digital art",
+    "title": "N'Goni Dub Trio",
+    "description": "Band poster",
     "orientation": "vertical",
-    "filteredOrder": 1
+    "filteredOrder": 5
   },
   {
     "type": "photo",
-    "id": "22714320464_2147618cff_b.jpg",
-    "title": "Cock",
-    "description": "Hoi An, Vietnam",
-    "camera": "Nikon D750",
-    "orientation": "horizontal"
-  },
-  {
-    "type": "video",
-    "title": "These Walls",
-    "description": "Jazz cover",
-    "id": "X5thM_ze_a4",
-    "orientation": "horizontal",
-    "filteredOrder": 3
-  },
-  {
-    "type": "photo",
-    "id": "21601462960_81675438f1_h.jpg",
-    "title": "The Pham",
-    "description": "Los Angeles",
+    "id": "23229339384_b184c5b0d0_b.jpg",
+    "title": "Lanterns",
     "camera": "Nikon D90",
-    "orientation": "vertical"
+    "description": "Hoi An, Vietnam",
+    "orientation": "banner"
+  },
+  {
+    "type": "photo",
+    "id": "3753094794_27acbc6ae8.jpg",
+    "title": "Sinking",
+    "description": "Burlington, Vermont",
+    "camera": "Kiev 60TTL"
+  },
+  {
+    "id": "freshest.jpg",
+    "type": "design",
+    "title": "The Fresh Establishment",
+    "description": "Band poster",
+    "orientation": "horizontal",
+    "filteredOrder": 2
   },
   {
     "type": "photo",
@@ -113,10 +97,34 @@
     "camera": "Kiev 60TTL"
   },
   {
+    "type": "photo",
+    "id": "21601462960_81675438f1_h.jpg",
+    "title": "The Pham",
+    "description": "Los Angeles",
+    "camera": "Nikon D90",
+    "orientation": "vertical"
+  },
+  {
+    "type": "video",
+    "title": "These Walls",
+    "description": "Jazz cover",
+    "id": "X5thM_ze_a4",
+    "orientation": "horizontal",
+    "filteredOrder": 3
+  },
+  {
     "type": "music",
     "id": "927962875",
     "title": "Pepto",
     "filteredOrder": 4
+  },
+  {
+    "type": "photo",
+    "id": "22714320464_2147618cff_b.jpg",
+    "title": "Cock",
+    "description": "Hoi An, Vietnam",
+    "camera": "Nikon D750",
+    "orientation": "horizontal"
   },
   {
     "type": "photo",
@@ -143,18 +151,10 @@
   },
   {
     "type": "photo",
-    "id": "3753094794_27acbc6ae8.jpg",
-    "title": "Sinking",
-    "description": "Burlington, Vermont",
-    "camera": "Kiev 60TTL"
-  },
-  {
-    "type": "photo",
-    "id": "4404601193_97c960bd8a_b.jpg",
-    "title": "Slum",
-    "description": "Chenai, India",
-    "camera": "Nikon D90",
-    "orientation": "horizontal"
+    "id": "190747690_73868f6030_o.jpg",
+    "title": "Dominican Rider",
+    "description": "Dominican Republic",
+    "camera": "Holga"
   },
   {
     "id": "tyler.jpg",
@@ -165,25 +165,24 @@
     "filteredOrder": 10
   },
   {
-    "id": "freshest.jpg",
-    "type": "design",
-    "title": "The Fresh Establishment",
-    "description": "Band poster",
-    "orientation": "horizontal",
-    "filteredOrder": 2
+    "type": "photo",
+    "id": "4404601193_97c960bd8a_b.jpg",
+    "title": "Slum",
+    "description": "Chenai, India",
+    "camera": "Nikon D90",
+    "orientation": "horizontal"
+  },
+  {
+    "type": "photo",
+    "id": "311278822_a0f27908ce_o.jpg",
+    "title": "Lake Champlain",
+    "description": "Burlington, Vermont",
+    "camera": "Polaroid SX-70"
   },
   {
     "type": "music",
     "id": "599074746",
     "title": "Knockout Ned",
-    "filteredOrder": 5
-  },
-  {
-    "id": "5214247101_fbfca1e0eb_z.jpg",
-    "type": "design",
-    "title": "N'Goni Dub Trio",
-    "description": "Band poster",
-    "orientation": "vertical",
     "filteredOrder": 5
   },
   {
@@ -204,18 +203,26 @@
   },
   {
     "type": "photo",
+    "id": "23535846656_48036a1eb3_b.jpg",
+    "title": "Sue",
+    "description": "Hoi An, Vietnam",
+    "camera": "Nikon D750",
+    "orientation": "vertical"
+  },
+  {
+    "type": "photo",
+    "id": "2659510934_abea2003cc_o.jpg",
+    "title": "Lake Champlain",
+    "description": "Burlington, Vermont",
+    "camera": "Holga"
+  },
+  {
+    "type": "photo",
     "id": "23651655586_7736e9c688_b.jpg",
     "title": "House Boat",
     "description": "Halong Bay, Vietnam",
     "camera": "Nikon D750",
     "orientation": "horizontal"
-  },
-  {
-    "type": "photo",
-    "id": "311278822_a0f27908ce_o.jpg",
-    "title": "Lake Champlain",
-    "description": "Burlington, Vermont",
-    "camera": "Polaroid SX-70"
   },
   {
     "type": "music",
@@ -230,13 +237,6 @@
     "description": "Chiang Rai, Thailand",
     "camera": "Diana camera",
     "orientation": "block"
-  },
-  {
-    "type": "photo",
-    "id": "2659510934_abea2003cc_o.jpg",
-    "title": "Lake Champlain",
-    "description": "Burlington, Vermont",
-    "camera": "Holga"
   },
   {
     "type": "photo",
