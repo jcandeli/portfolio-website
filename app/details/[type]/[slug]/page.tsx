@@ -47,10 +47,5 @@ export default async function MediaPage({ params }: MediaPageProps) {
     notFound();
   }
 
-  return (
-    <DetailsPage
-      mediaItem={mediaItem as Video | Photo | Design}
-      type={type as "video" | "photo" | "design"}
-    />
-  );
+  return <DetailsPage mediaItem={mediaItem as Video | Photo | Design} />;
 }
