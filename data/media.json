@@ -61,14 +61,6 @@
   },
   {
     "type": "photo",
-    "id": "23229339384_b184c5b0d0_b.jpg",
-    "title": "Lanterns",
-    "camera": "Nikon D90",
-    "description": "Hoi An, Vietnam",
-    "orientation": "banner"
-  },
-  {
-    "type": "photo",
     "id": "3753094794_27acbc6ae8.jpg",
     "title": "Sinking",
     "description": "Burlington, Vermont",
@@ -81,6 +73,46 @@
     "description": "Band poster",
     "orientation": "horizontal",
     "filteredOrder": 2
+  },
+  {
+    "type": "photo",
+    "id": "23229339384_b184c5b0d0_b.jpg",
+    "title": "Lanterns",
+    "camera": "Nikon D90",
+    "description": "Hoi An, Vietnam",
+    "orientation": "banner"
+  },
+  {
+    "type": "photo",
+    "id": "23850487005_2f01363c08_b.jpg",
+    "title": "Whistler",
+    "description": "Hue, Vietnam",
+    "camera": "Nikon D750",
+    "orientation": "vertical"
+  },
+  {
+    "type": "photo",
+    "id": "kerela.jpg",
+    "title": "Canals",
+    "description": "Kerala, India",
+    "camera": "Diana Camera",
+    "orientation": "block"
+  },
+  {
+    "type": "photo",
+    "id": "21601462960_81675438f1_h.jpg",
+    "title": "The Pham",
+    "description": "Los Angeles",
+    "camera": "Nikon D90",
+    "orientation": "vertical"
+  },
+  {
+    "id": "49752056731_ef02c496f9_k.jpg",
+    "type": "design",
+    "title": "The Project Elevator",
+    "description": "Digital art",
+    "orientation": "horizontal",
+    "filteredOrder": 6
   },
   {
     "type": "photo",
@@ -98,11 +130,10 @@
   },
   {
     "type": "photo",
-    "id": "21601462960_81675438f1_h.jpg",
-    "title": "The Pham",
-    "description": "Los Angeles",
-    "camera": "Nikon D90",
-    "orientation": "vertical"
+    "id": "cm-temple.jpg",
+    "title": "Wat Phra That",
+    "description": "Chiang Mai, Thailand",
+    "camera": "Diana Camera"
   },
   {
     "type": "video",
@@ -113,6 +144,14 @@
     "filteredOrder": 3
   },
   {
+    "id": "tyler.jpg",
+    "type": "design",
+    "title": "Tyler",
+    "description": "Digital art",
+    "orientation": "vertical",
+    "filteredOrder": 10
+  },
+  {
     "type": "music",
     "id": "927962875",
     "title": "Pepto",
@@ -120,11 +159,10 @@
   },
   {
     "type": "photo",
-    "id": "22714320464_2147618cff_b.jpg",
-    "title": "Cock",
-    "description": "Hoi An, Vietnam",
-    "camera": "Nikon D750",
-    "orientation": "horizontal"
+    "id": "2546430828_a764bee6be_o.jpg",
+    "title": "Alex Toth",
+    "description": "Burlington, Vermont",
+    "camera": "Kiev 60TTL"
   },
   {
     "type": "photo",
@@ -132,6 +170,14 @@
     "title": "Slum",
     "description": "Chenai, India",
     "camera": "Nikon D90",
+    "orientation": "horizontal"
+  },
+  {
+    "type": "photo",
+    "id": "22714320464_2147618cff_b.jpg",
+    "title": "Cock",
+    "description": "Hoi An, Vietnam",
+    "camera": "Nikon D750",
     "orientation": "horizontal"
   },
   {
@@ -155,14 +201,6 @@
     "title": "Dominican Rider",
     "description": "Dominican Republic",
     "camera": "Holga"
-  },
-  {
-    "id": "tyler.jpg",
-    "type": "design",
-    "title": "Tyler",
-    "description": "Digital art",
-    "orientation": "vertical",
-    "filteredOrder": 10
   },
   {
     "type": "photo",
@@ -195,11 +233,11 @@
   },
   {
     "type": "photo",
-    "id": "23850487005_2f01363c08_b.jpg",
-    "title": "Whistler",
-    "description": "Hue, Vietnam",
-    "camera": "Nikon D750",
-    "orientation": "vertical"
+    "id": "3257423319_7b723c6320_b.jpg",
+    "title": "The White Temple",
+    "description": "Chiang Rai, Thailand",
+    "camera": "Diana camera",
+    "orientation": "block"
   },
   {
     "type": "photo",
@@ -217,33 +255,10 @@
     "camera": "Holga"
   },
   {
-    "type": "photo",
-    "id": "23651655586_7736e9c688_b.jpg",
-    "title": "House Boat",
-    "description": "Halong Bay, Vietnam",
-    "camera": "Nikon D750",
-    "orientation": "horizontal"
-  },
-  {
     "type": "music",
     "id": "892770742",
     "title": "Flood the Block",
     "filteredOrder": 8
-  },
-  {
-    "type": "photo",
-    "id": "3257423319_7b723c6320_b.jpg",
-    "title": "The White Temple",
-    "description": "Chiang Rai, Thailand",
-    "camera": "Diana camera",
-    "orientation": "block"
-  },
-  {
-    "type": "photo",
-    "id": "2546430828_a764bee6be_o.jpg",
-    "title": "Alex Toth",
-    "description": "Burlington, Vermont",
-    "camera": "Kiev 60TTL"
   },
   {
     "id": "5176407528_574695a7e0.jpg",
@@ -254,22 +269,6 @@
     "filteredOrder": 7
   },
   {
-    "id": "5766888298_90828f76db.jpg",
-    "type": "design",
-    "title": "Tiffany Pfieffer",
-    "description": "Band poster",
-    "orientation": "vertical",
-    "filteredOrder": 8
-  },
-  {
-    "id": "kina-zore-bishops.jpg",
-    "type": "design",
-    "title": "Kina Zore",
-    "description": "Band poster",
-    "orientation": "vertical",
-    "filteredOrder": 9
-  },
-  {
     "id": "invisible homes.jpg",
     "type": "design",
     "title": "Invisible Homes",
@@ -278,12 +277,19 @@
     "filteredOrder": 13
   },
   {
-    "id": "49755678801_e20169b22b_k.jpg",
+    "id": "5766888298_90828f76db.jpg",
     "type": "design",
-    "title": "The Projects",
-    "description": "Digital art",
+    "title": "Tiffany Pfieffer",
+    "description": "Band poster",
     "orientation": "vertical",
-    "filteredOrder": 11
+    "filteredOrder": 8
+  },
+  {
+    "type": "photo",
+    "id": "3529806366_6701f0a2a7_b.jpg",
+    "title": "Swamp",
+    "description": "Bethel, Vermont",
+    "camera": "Kiev 60TTL"
   },
   {
     "type": "photo",
@@ -291,43 +297,6 @@
     "title": "Rubblebucket",
     "description": "Burlington, Vermont",
     "camera": "Kiev 60TTL"
-  },
-  {
-    "type": "photo",
-    "id": "2752556585_da212416f7_o.jpg",
-    "title": "Parking Garage",
-    "description": "Burlington, Vermont",
-    "camera": "Holga"
-  },
-  {
-    "type": "music",
-    "id": "1262846917",
-    "title": "Take your time",
-    "filteredOrder": 9
-  },
-  {
-    "type": "video",
-    "title": "Autumn Leaves",
-    "description": "Jazz cover",
-    "id": "tx8BlCl24d4",
-    "orientation": "horizontal",
-    "filteredOrder": 6
-  },
-  {
-    "type": "photo",
-    "id": "4364031123_ba885c6583_b.jpg",
-    "title": "Slum",
-    "description": "Chenai, India",
-    "camera": "Nikon D90",
-    "orientation": "horizontal"
-  },
-  {
-    "type": "photo",
-    "id": "7737315806_a19e7af564_b.jpeg",
-    "title": "Sue",
-    "description": "Los Angeles",
-    "camera": "Nikon D90",
-    "orientation": "vertical"
   },
   {
     "type": "video",
@@ -346,6 +315,51 @@
   },
   {
     "type": "photo",
+    "id": "2752556585_da212416f7_o.jpg",
+    "title": "Parking Garage",
+    "description": "Burlington, Vermont",
+    "camera": "Holga"
+  },
+  {
+    "id": "kina-zore-bishops.jpg",
+    "type": "design",
+    "title": "Kina Zore",
+    "description": "Band poster",
+    "orientation": "vertical",
+    "filteredOrder": 9
+  },
+  {
+    "id": "49755678801_e20169b22b_k.jpg",
+    "type": "design",
+    "title": "The Projects",
+    "description": "Digital art",
+    "orientation": "vertical",
+    "filteredOrder": 11
+  },
+  {
+    "id": "barika-malmaiz.jpg",
+    "type": "design",
+    "title": "Barika",
+    "description": "Band poster",
+    "orientation": "vertical",
+    "filteredOrder": 14
+  },
+  {
+    "type": "music",
+    "id": "1262846917",
+    "title": "Take your time",
+    "filteredOrder": 9
+  },
+  {
+    "type": "video",
+    "title": "Autumn Leaves",
+    "description": "Jazz cover",
+    "id": "tx8BlCl24d4",
+    "orientation": "horizontal",
+    "filteredOrder": 6
+  },
+  {
+    "type": "photo",
     "id": "3327651843_0b2b74a70c_b.jpg",
     "title": "School",
     "description": "Mayanmar",
@@ -353,10 +367,10 @@
   },
   {
     "type": "photo",
-    "id": "422072087_22ea7f952a_b.jpg",
-    "title": "Blind Musician",
-    "description": "Bangkok, Thailand",
-    "camera": "Nikon D70",
+    "id": "7730432316_f728bbff58_b.jpg",
+    "title": "Succulent Sue",
+    "description": "Los Angeles",
+    "camera": "Nikon D90",
     "orientation": "vertical"
   },
   {
@@ -390,12 +404,19 @@
     "orientation": "horizontal"
   },
   {
-    "id": "barika-malmaiz.jpg",
+    "type": "video",
+    "title": "Carrtoons - Vamp",
+    "description": "Bass cover",
+    "id": "-yZ6-Hu39Bs",
+    "orientation": "horizontal",
+    "filteredOrder": 10
+  },
+  {
+    "id": "49751522103_937c0337fe_k.jpg",
     "type": "design",
-    "title": "Barika",
-    "description": "Band poster",
-    "orientation": "vertical",
-    "filteredOrder": 14
+    "title": "NYC 1987",
+    "description": "Digital art",
+    "orientation": "vertical"
   },
   {
     "id": "barika-rise.jpg",
@@ -413,44 +434,6 @@
   },
   {
     "type": "video",
-    "title": "Carrtoons - Vamp",
-    "description": "Bass cover",
-    "id": "-yZ6-Hu39Bs",
-    "orientation": "horizontal",
-    "filteredOrder": 10
-  },
-  {
-    "id": "49752056731_ef02c496f9_k.jpg",
-    "type": "design",
-    "title": "The Project Elevator",
-    "description": "Digital art",
-    "orientation": "horizontal",
-    "filteredOrder": 6
-  },
-  {
-    "id": "49751522103_937c0337fe_k.jpg",
-    "type": "design",
-    "title": "NYC 1987",
-    "description": "Digital art",
-    "orientation": "vertical"
-  },
-  {
-    "id": "5771829677_cd0c44e3a6.jpg",
-    "type": "design",
-    "title": "J Dilla Tribute",
-    "description": "Band poster",
-    "orientation": "vertical",
-    "filteredOrder": 12
-  },
-  {
-    "type": "photo",
-    "id": "3529806366_6701f0a2a7_b.jpg",
-    "title": "Swamp",
-    "description": "Bethel, Vermont",
-    "camera": "Kiev 60TTL"
-  },
-  {
-    "type": "video",
     "title": "Jorja Smith - On My Mind",
     "id": "hXEyn5RnhUk",
     "orientation": "horizontal",
@@ -458,39 +441,10 @@
   },
   {
     "type": "photo",
-    "id": "7730432316_f728bbff58_b.jpg",
-    "title": "Succulent Sue",
-    "description": "Los Angeles",
-    "camera": "Nikon D90",
+    "id": "422072087_22ea7f952a_b.jpg",
+    "title": "Blind Musician",
+    "description": "Bangkok, Thailand",
+    "camera": "Nikon D70",
     "orientation": "vertical"
-  },
-  {
-    "id": "raja-kasis.jpg",
-    "type": "design",
-    "title": "Raja Kasis",
-    "description": "Album art",
-    "orientation": "horizontal",
-    "filteredOrder": 15
-  },
-  {
-    "type": "photo",
-    "id": "4042770370_d656541c2f_b.jpg",
-    "title": "Orphans",
-    "description": "India",
-    "camera": "Nikon D90",
-    "orientation": "horizontal"
-  },
-  {
-    "type": "music",
-    "id": "587898120",
-    "title": "Chicken and Waffles",
-    "filteredOrder": 12
-  },
-  {
-    "type": "video",
-    "title": "ATC - Excursions",
-    "description": "Bass cover",
-    "id": "Ew2odS9VluM",
-    "orientation": "horizontal"
   }
 ]

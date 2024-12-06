@@ -70,7 +70,9 @@ export default function AdminPage() {
               <GridItem
                 key={item.id}
                 orientation={
-                  item.type === "photo" || item.type === "design"
+                  item.type === "video"
+                    ? "horizontal"
+                    : item.type === "photo" || item.type === "design"
                     ? item.orientation
                     : undefined
                 }
