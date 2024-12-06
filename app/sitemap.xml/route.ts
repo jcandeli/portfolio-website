@@ -5,7 +5,7 @@ import { createMediaDetailsUrl } from "@/utils/url";
 export async function GET() {
   const baseUrl = "https://jpcandelier.com";
 
-  const staticRoutes = [""];
+  const staticRoutes = ["", "/designs", "/music", "/photos"];
 
   const staticPages = staticRoutes.map((route) => ({
     url: `${baseUrl}${route}`,
