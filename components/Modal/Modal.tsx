@@ -1,6 +1,6 @@
 import { ReactNode, useEffect } from "react";
 import styled from "@emotion/styled";
-import { X } from "lucide-react";
+import { X, Expand } from "lucide-react";
 import FocusTrap from "focus-trap-react";
 
 const ModalOverlay = styled.div`
@@ -22,15 +22,38 @@ const ModalContent = styled.div`
   box-shadow: 0px 2px 6px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
 `;
 
-const CloseButton = styled.button`
+const ActionButtons = styled.div`
   position: absolute;
-  top: -3rem;
-  right: 0;
+  top: 0;
+  right: -3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+`;
+
+const IconButton = styled.button`
   border: none;
   cursor: pointer;
   padding: 0.5rem;
   background-color: rgba(128, 128, 128, 0.5);
   color: #fff;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: rgba(128, 128, 128, 0.7);
+  }
+`;
+
+const IconLink = styled.a`
+  display: block;
+  padding: 0.5rem;
+  background-color: rgba(128, 128, 128, 0.5);
+  color: #fff;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: rgba(128, 128, 128, 0.7);
+  }
 `;
 
 interface ModalProps {
@@ -38,9 +61,10 @@ interface ModalProps {
   onClose?: () => void;
   children?: ReactNode;
   id?: string;
+  detailsUrl?: string;
 }
 
-const Modal = ({ isOpen, onClose, children, id }: ModalProps) => {
+const Modal = ({ isOpen, onClose, children, id, detailsUrl }: ModalProps) => {
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape" && onClose) {
@@ -81,9 +105,20 @@ const Modal = ({ isOpen, onClose, children, id }: ModalProps) => {
           id={id}
           role="document"
         >
-          <CloseButton onClick={onClose} aria-label="Close modal">
-            <X size={24} />
-          </CloseButton>
+          <ActionButtons>
+            <IconButton onClick={onClose} aria-label="Close modal">
+              <X size={24} />
+            </IconButton>
+            {detailsUrl && (
+              <IconLink
+                href={detailsUrl}
+                aria-label="View full details"
+                title="Open in new page"
+              >
+                <Expand size={24} />
+              </IconLink>
+            )}
+          </ActionButtons>
           {children}
         </ModalContent>
       </ModalOverlay>

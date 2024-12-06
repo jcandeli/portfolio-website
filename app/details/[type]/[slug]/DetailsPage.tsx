@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import MediaCard from "@/components/MediaCard";
 import MediaDetails from "@/components/MediaDetails/MediaDetails";
 import styled from "@emotion/styled";
@@ -8,16 +7,19 @@ import { Design, Photo, Video } from "@/types";
 
 interface DetailsPageProps {
   mediaItem: Photo | Design | Video;
-  type: "photo" | "design" | "video";
 }
 
-const BackLink = styled(Link)`
+const BackLink = styled.button`
   display: inline-block;
   margin-bottom: 1rem;
   color: var(--muted-foreground);
   font-size: 0.875rem;
   text-decoration: none;
   transition: color 0.2s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
 
   &:hover {
     color: var(--foreground);
@@ -46,14 +48,10 @@ const MediaDetailsWrapper = styled.div`
   }
 `;
 
-export function DetailsPage({ mediaItem, type }: DetailsPageProps) {
-  const mediaType = type === "video" ? "video" : `${type}s`;
-
+export function DetailsPage({ mediaItem }: DetailsPageProps) {
   return (
     <ContentWrapper>
-      <BackLink href={`/${mediaType.toLowerCase()}`}>
-        ← {mediaType.toUpperCase()}
-      </BackLink>
+      <BackLink onClick={() => window.history.back()}>← Back</BackLink>
       <MediaCardWrapper>
         <MediaCard media={mediaItem} showOverlay={false} />
       </MediaCardWrapper>
