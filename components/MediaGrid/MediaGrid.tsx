@@ -15,6 +15,9 @@ const ModalContent = styled.figure`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @media (max-width: 768px) {
+    max-width: 75vw;
+  }
 `;
 
 const ImageCaption = styled.figcaption`
@@ -28,6 +31,9 @@ const Image = styled.img`
   object-fit: cover;
   max-width: min(90vw, 1200px);
   max-height: 70vh;
+  @media (max-width: 768px) {
+    max-width: 75vw;
+  }
 `;
 
 const VideoFrame = styled.iframe`
