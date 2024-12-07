@@ -16,7 +16,7 @@ const ModalContent = styled.figure`
   align-items: center;
   justify-content: center;
   @media (max-width: 768px) {
-    max-width: 75vw;
+    max-width: 90vw;
   }
 `;
 
@@ -31,9 +31,6 @@ const Image = styled.img`
   object-fit: cover;
   max-width: min(90vw, 1200px);
   max-height: 70vh;
-  @media (max-width: 768px) {
-    max-width: 75vw;
-  }
 `;
 
 const VideoFrame = styled.iframe`

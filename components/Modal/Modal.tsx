@@ -29,6 +29,12 @@ const ActionButtons = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+
+  @media (max-width: 768px) {
+    top: -3rem;
+    left: 0;
+    flex-direction: row;
+  }
 `;
 
 const IconButton = styled.button`
