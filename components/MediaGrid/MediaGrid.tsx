@@ -49,7 +49,6 @@ const StyledHeading = styled.div`
 
 const StyledLastName = styled.span`
   line-height: 0.72;
-  color: #2d2d2d;
   display: inline-block;
 `;
 

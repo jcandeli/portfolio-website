@@ -3,8 +3,9 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import styled from "@emotion/styled";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Moon, Sun } from "lucide-react";
 import FocusTrap from "focus-trap-react";
+import { useGlobal } from "@/contexts/GlobalContext";
 
 const NavContainer = styled.nav`
   padding: 1rem 0;
@@ -61,7 +62,23 @@ const ExternalLink = styled.a`
   }
 `;
 
+const ThemeButton = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: var(--secondary);
+  }
+`;
+
 function Navigation() {
+  const { isDarkMode, toggleTheme } = useGlobal();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -154,6 +171,16 @@ function Navigation() {
           >
             GitHub
           </ExternalLink>
+        </NavItem>
+        <NavItem>
+          <ThemeButton
+            onClick={toggleTheme}
+            aria-label={
+              isDarkMode ? "Switch to light mode" : "Switch to dark mode"
+            }
+          >
+            {isDarkMode ? <Sun size={16} /> : <Moon size={16} />}
+          </ThemeButton>
         </NavItem>
       </NavList>
     </NavContainer>

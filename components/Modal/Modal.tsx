@@ -42,7 +42,7 @@ const IconButton = styled.button`
   cursor: pointer;
   padding: 0.5rem;
   background-color: rgba(128, 128, 128, 0.5);
-  color: var(--primary);
+  color: #fff;
   transition: background-color 0.2s;
 
   &:hover {
@@ -54,7 +54,7 @@ const IconLink = styled.a`
   display: block;
   padding: 0.5rem;
   background-color: rgba(128, 128, 128, 0.5);
-  color: var(--primary);
+  color: #fff;
   transition: background-color 0.2s;
 
   &:hover {

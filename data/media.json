@@ -8,14 +8,6 @@
     "orientation": "block"
   },
   {
-    "type": "photo",
-    "id": "4571721717_bb4f9da01a_b.jpg",
-    "title": "Observatory",
-    "description": "Jaipur, India",
-    "camera": "Olympus XA",
-    "orientation": "horizontal"
-  },
-  {
     "id": "biggie.jpg",
     "type": "design",
     "title": "Biggie",
@@ -37,12 +29,12 @@
     "camera": "Kiev 60TTL"
   },
   {
-    "type": "video",
-    "title": "Anderson .Paak - Winners Circle",
-    "description": "Bass cover",
-    "id": "9llqlSpLdRk",
-    "orientation": "horizontal",
-    "filteredOrder": 2
+    "type": "photo",
+    "id": "4571721717_bb4f9da01a_b.jpg",
+    "title": "Observatory",
+    "description": "Jaipur, India",
+    "camera": "Olympus XA",
+    "orientation": "horizontal"
   },
   {
     "type": "photo",
@@ -138,11 +130,11 @@
   },
   {
     "type": "video",
-    "title": "These Walls",
-    "description": "Jazz cover",
-    "id": "X5thM_ze_a4",
+    "title": "Anderson .Paak - Winners Circle",
+    "description": "Bass cover",
+    "id": "9llqlSpLdRk",
     "orientation": "horizontal",
-    "filteredOrder": 3
+    "filteredOrder": 2
   },
   {
     "id": "tyler.jpg",
@@ -270,12 +262,12 @@
     "filteredOrder": 7
   },
   {
-    "id": "invisible homes.jpg",
-    "type": "design",
-    "title": "Invisible Homes",
-    "description": "Album art",
+    "type": "video",
+    "title": "These Walls",
+    "description": "Jazz cover",
+    "id": "X5thM_ze_a4",
     "orientation": "horizontal",
-    "filteredOrder": 13
+    "filteredOrder": 3
   },
   {
     "id": "5766888298_90828f76db.jpg",
@@ -352,12 +344,12 @@
     "filteredOrder": 9
   },
   {
-    "type": "video",
-    "title": "Autumn Leaves",
-    "description": "Jazz cover",
-    "id": "tx8BlCl24d4",
+    "id": "invisible homes.jpg",
+    "type": "design",
+    "title": "Invisible Homes",
+    "description": "Album art",
     "orientation": "horizontal",
-    "filteredOrder": 6
+    "filteredOrder": 13
   },
   {
     "type": "photo",

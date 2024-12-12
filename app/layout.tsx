@@ -1,14 +1,8 @@
 import Navigation from "@/components/Navigation";
+import { GlobalProvider } from "@/contexts/GlobalContext";
 import { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import { StyledBody } from "@/components/StyledBody";
 import "./globals.css";
-
-const roboto = Roboto({
-  weight: ["400"],
-  subsets: ["latin"],
-  display: "block",
-  preload: true,
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://jpcandelier.com"),
@@ -45,16 +39,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
-        <a
-          href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-white text-black p-2 z-50"
-        >
-          Skip to main content
-        </a>
-        <Navigation />
-        <main id="main-content">{children}</main>
-      </body>
+      <GlobalProvider>
+        <StyledBody>
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-white text-black p-2 z-50"
+          >
+            Skip to main content
+          </a>
+          <Navigation />
+          <main id="main-content">{children}</main>
+        </StyledBody>
+      </GlobalProvider>
     </html>
   );
 }
