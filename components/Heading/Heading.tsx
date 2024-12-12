@@ -18,7 +18,7 @@ const getHeadingStyle = (level: number) => {
   if (level === 1) {
     return {
       ...baseStyle,
-      fontSize: "min(24.5vw, 348px)",
+      fontSize: "min(16vw, 240px)",
       letterSpacing: "max(-1vw, -0.5rem)",
     } as const;
   } else if (level === 2) {

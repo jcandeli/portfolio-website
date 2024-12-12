@@ -29,12 +29,13 @@ const DropdownButton = styled.button`
   cursor: pointer;
   display: flex;
   align-items: center;
+  color: var(--primary);
 `;
 
 const DropdownMenu = styled.ul<{ isOpen: boolean }>`
   position: absolute;
-  background-color: white;
-  border: 1px solid #ccc;
+  background-color: var(--secondary);
+  border: 1px solid var(--primary);
   border-radius: 4px;
   padding: 0.5rem;
   list-style-type: none;
@@ -43,7 +44,7 @@ const DropdownMenu = styled.ul<{ isOpen: boolean }>`
 
 const NavLink = styled(Link)`
   text-decoration: none;
-  color: inherit;
+  color: var(--primary);
   display: flex;
   align-items: center;
   font-size: 1.25rem;
@@ -54,7 +55,7 @@ const NavLink = styled(Link)`
 
 const ExternalLink = styled.a`
   text-decoration: none;
-  color: inherit;
+  color: var(--primary);
   &:hover {
     text-decoration: underline;
   }

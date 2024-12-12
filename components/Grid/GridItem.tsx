@@ -10,14 +10,16 @@ const GridItem: StyledComponent<"div", any, GridItemProps> = styled.div`
   grid-column: span 1;
   grid-row: span 1;
   width: 100%;
-  background-color: #dfdfdf;
+  /* background-color: #dfdfdf; */
 
   @media (min-width: 768px) {
     grid-column: span
       ${({ orientation }: GridItemProps) =>
         (orientation === "horizontal" && 2) ||
         (orientation === "block" && 2) ||
-        (orientation === "banner" && 3)};
+        (orientation === "banner" && 3) ||
+        (orientation === "vertical" && 1) ||
+        1};
     grid-row: span
       ${({ orientation }) =>
         (orientation === "vertical" && 2) || (orientation === "block" && 2)};

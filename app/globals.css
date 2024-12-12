@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --primary: #121212;
+    --secondary: #e1e1e1;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #e1e1e1;
+    --secondary: #121212;
+  }
+}
+
+
 body {
   font-size: 18px;
   max-width: 1400px;
@@ -19,9 +34,13 @@ button:focus-visible {
   outline-offset: 4px;
 }
 
+.h1 {
+  text-align: end;
+}
+
 .h2 {
-  text-wrap: balance;
-  text-align: center;
+  text-align: end;
+  line-height: 0.85 !important;
 }
 
 @media (max-width: 768px) {
