@@ -16,6 +16,7 @@ const NavContainer = styled.nav`
 const NavList = styled.ul`
   display: flex;
   list-style-type: none;
+  align-items: center;
   padding: 0;
   margin: 0;
 `;

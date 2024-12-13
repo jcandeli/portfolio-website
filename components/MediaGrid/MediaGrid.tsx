@@ -2,43 +2,11 @@
 
 import Grid, { GridItem } from "@/components/Grid";
 import MediaCard from "@/components/MediaCard";
-import Modal from "@/components/Modal";
-import { Design, Media, Photo, Video } from "@/types";
+import { Media, Photo } from "@/types";
 import styled from "@emotion/styled";
-import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import MediaDetails from "@/components/MediaDetails/MediaDetails";
-import { createMediaDetailsUrl } from "@/utils/url";
 import Heading from "../Heading";
-
-const ModalContent = styled.figure`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  @media (max-width: 768px) {
-    max-width: 90vw;
-  }
-`;
-
-const ImageCaption = styled.figcaption`
-  width: 100%;
-  align-self: flex-start;
-  padding: 2rem;
-  position: relative;
-`;
-
-const Image = styled.img`
-  object-fit: cover;
-  max-width: min(90vw, 1200px);
-  max-height: 70vh;
-`;
-
-const VideoFrame = styled.iframe`
-  width: min(90vw, 1200px);
-  height: min(70vh, calc(90vw * 9 / 16));
-  max-width: 100%;
-`;
+import { useGlobal } from "@/contexts/GlobalContext";
 
 const StyledHeading = styled.div`
   display: flex;
@@ -69,9 +37,7 @@ const item = {
 };
 
 export default function MediaGrid({ media }: { media: Media[] }) {
-  const [selectedMedia, setSelectedMedia] = useState<
-    Photo | Design | Video | null
-  >();
+  const { setSelectedMedia } = useGlobal();
 
   const handleMediaClick = (media: Media) => {
     if (
@@ -81,10 +47,6 @@ export default function MediaGrid({ media }: { media: Media[] }) {
     ) {
       setSelectedMedia(media);
     }
-  };
-
-  const handleCloseModal = () => {
-    setSelectedMedia(null);
   };
 
   return (
@@ -138,39 +100,6 @@ export default function MediaGrid({ media }: { media: Media[] }) {
             </GridItem>
           ))}
         </AnimatePresence>
-
-        {selectedMedia && (
-          <Modal
-            isOpen
-            onClose={handleCloseModal}
-            aria-label={`${selectedMedia.title} details`}
-            id="media-modal"
-            detailsUrl={createMediaDetailsUrl(
-              selectedMedia.type,
-              selectedMedia.title,
-              selectedMedia.id
-            )}
-          >
-            <ModalContent>
-              {selectedMedia.type === "video" ? (
-                <VideoFrame
-                  title="YouTube Video Player"
-                  src={`https://www.youtube.com/embed/${selectedMedia.id}?autoplay=1`}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-              ) : (
-                <Image
-                  src={`/portfolio/${selectedMedia.type}/${selectedMedia.id}`}
-                  alt={`${selectedMedia.title}`}
-                />
-              )}
-              <ImageCaption>
-                <MediaDetails media={selectedMedia} />
-              </ImageCaption>
-            </ModalContent>
-          </Modal>
-        )}
       </Grid>
     </>
   );

@@ -1,19 +1,21 @@
 "use client";
 
-import { Media } from "@/types";
+import { Design, Photo, Video } from "@/types";
 import { createContext, useContext, useState, ReactNode } from "react";
 
 interface GlobalContextType {
-  selectedMedia: Media | null;
+  selectedMedia: Video | Photo | Design | null;
   isDarkMode: boolean;
-  setSelectedMedia: (media: Media | null) => void;
+  setSelectedMedia: (media: Video | Photo | Design | null) => void;
   toggleTheme: () => void;
 }
 
 const GlobalContext = createContext<GlobalContextType | undefined>(undefined);
 
 export function GlobalProvider({ children }: { children: ReactNode }) {
-  const [selectedMedia, setSelectedMedia] = useState<Media | null>(null);
+  const [selectedMedia, setSelectedMedia] = useState<
+    Video | Photo | Design | null
+  >(null);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const toggleTheme = () => {
