@@ -3,22 +3,8 @@
 import Grid, { GridItem } from "@/components/Grid";
 import MediaCard from "@/components/MediaCard";
 import { Media, Photo } from "@/types";
-import styled from "@emotion/styled";
 import { motion, AnimatePresence } from "framer-motion";
-import Heading from "../Heading";
 import { useGlobal } from "@/contexts/GlobalContext";
-
-const StyledHeading = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-`;
-
-const StyledLastName = styled.span`
-  line-height: 0.72;
-  display: inline-block;
-`;
 
 const item = {
   hidden: {
@@ -52,24 +38,6 @@ export default function MediaGrid({ media }: { media: Media[] }) {
   return (
     <>
       <Grid>
-        <GridItem orientation="vertical">
-          <StyledHeading>
-            <Heading level={1} className="h1">
-              JP
-              <br />
-              <StyledLastName>
-                Can
-                <br />
-                de
-                <br />
-                lier
-              </StyledLastName>
-            </Heading>
-            <Heading level={2} className="h2">
-              Exploring Creativity Through Lens, Sound, and Design.
-            </Heading>
-          </StyledHeading>
-        </GridItem>
         <AnimatePresence>
           {media.map((media: Media) => (
             <GridItem

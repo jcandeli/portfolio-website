@@ -20,6 +20,7 @@ const Grid = styled(MotionGrid)`
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
+  margin-bottom: 2rem;
 
   @media (min-width: 768px) {
     grid-template-columns: repeat(${GRID_COLS}, 1fr);
