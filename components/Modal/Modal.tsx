@@ -1,7 +1,9 @@
-import { ReactNode, useEffect } from "react";
-import styled from "@emotion/styled";
-import { X, Expand } from "lucide-react";
 import FocusTrap from "focus-trap-react";
+import Link from "next/link";
+import styled from "@emotion/styled";
+import { Expand, X } from "lucide-react";
+import { ReactNode, useEffect } from "react";
+import { useGlobal } from "@/contexts/GlobalContext";
 
 const ModalOverlay = styled.div`
   position: fixed;
@@ -51,7 +53,7 @@ const IconButton = styled.button`
   }
 `;
 
-const IconLink = styled.a`
+const IconLink = styled(Link)`
   display: block;
   padding: 0.5rem;
   background-color: rgba(128, 128, 128, 0.5);
@@ -72,6 +74,8 @@ interface ModalProps {
 }
 
 const Modal = ({ isOpen, onClose, children, id, detailsUrl }: ModalProps) => {
+  const { setSelectedMedia } = useGlobal();
+
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape" && onClose) {
@@ -91,6 +95,10 @@ const Modal = ({ isOpen, onClose, children, id, detailsUrl }: ModalProps) => {
   }, [isOpen, onClose]);
 
   if (!isOpen) return null;
+
+  const handleDetailsClick = () => {
+    setSelectedMedia(null);
+  };
 
   return (
     <FocusTrap
@@ -121,6 +129,7 @@ const Modal = ({ isOpen, onClose, children, id, detailsUrl }: ModalProps) => {
                 href={detailsUrl}
                 aria-label="View full details"
                 title="Open in new page"
+                onClick={handleDetailsClick}
               >
                 <Expand size={24} />
               </IconLink>
