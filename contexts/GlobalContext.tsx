@@ -1,7 +1,13 @@
 "use client";
 
 import { Design, Photo, Video } from "@/types";
-import { createContext, useContext, useState, ReactNode } from "react";
+import {
+  createContext,
+  useContext,
+  useState,
+  ReactNode,
+  useEffect,
+} from "react";
 
 interface GlobalContextType {
   selectedMedia: Video | Photo | Design | null;
@@ -16,7 +22,26 @@ export function GlobalProvider({ children }: { children: ReactNode }) {
   const [selectedMedia, setSelectedMedia] = useState<
     Video | Photo | Design | null
   >(null);
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    if (typeof window !== "undefined") {
+      return window.matchMedia("(prefers-color-scheme: dark)").matches;
+    }
+    return false;
+  });
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+    const handleChange = (e: MediaQueryListEvent) => {
+      setIsDarkMode(e.matches);
+    };
+
+    mediaQuery.addEventListener("change", handleChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleChange);
+    };
+  }, []);
 
   const toggleTheme = () => {
     const newTheme = !isDarkMode;
