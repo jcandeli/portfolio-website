@@ -1,5 +1,13 @@
 [
   {
+    "type": "photo",
+    "id": "3299396187_97ccd37f7b_b.jpg",
+    "title": "Multiple Exposure",
+    "description": "Mae Hong Son, Thailand",
+    "camera": "Diana Camera",
+    "homepageHidden": true
+  },
+  {
     "id": "biggie.jpg",
     "type": "design",
     "title": "Biggie",

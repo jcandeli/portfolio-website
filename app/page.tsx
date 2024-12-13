@@ -7,7 +7,9 @@ export default function Home() {
   return (
     <>
       <Banner />
-      <MediaGrid media={mediaData as Media[]} />
+      <MediaGrid
+        media={mediaData.filter((m) => !m.homepageHidden) as Media[]}
+      />
     </>
   );
 }
