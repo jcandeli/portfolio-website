@@ -152,9 +152,9 @@ function Navigation() {
             </div>
           </FocusTrap>
         </NavItem>
-        {/* <NavItem>
-          <NavLink href="/about">About me</NavLink>
-        </NavItem> */}
+        <NavItem>
+          <NavLink href="/about-me">About me</NavLink>
+        </NavItem>
         <NavItem>
           <ExternalLink
             href="https://linkedin.com"
