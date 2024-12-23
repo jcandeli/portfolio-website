@@ -20,13 +20,29 @@ const media = {
 const StyledHeading = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 100%;
 `;
 
 const StyledLastName = styled.span`
-  line-height: 0.72;
+  line-height: 0.78;
   display: inline-block;
+`;
+
+const StyledSpan = styled.span`
+  display: block;
+  letter-spacing: -0.5rem;
+  @media (max-width: 768px) {
+    letter-spacing: -0.3rem;
+  }
+`;
+
+const StyledSpan2 = styled.span`
+  display: block;
+  letter-spacing: -0.8rem;
+  @media (max-width: 768px) {
+    letter-spacing: -0.6rem;
+  }
 `;
 
 export default function Banner() {
@@ -49,14 +65,11 @@ export default function Banner() {
           <Heading level={1} className="h1">
             <span className="visually-hidden">JP Candelier</span>
             <span aria-hidden="true">
-              JP
-              <br />
+              <StyledSpan>JP</StyledSpan>
               <StyledLastName>
-                Can
-                <br />
-                de
-                <br />
-                lier
+                <StyledSpan>Can</StyledSpan>
+                <StyledSpan>de</StyledSpan>
+                <StyledSpan2>lier</StyledSpan2>
               </StyledLastName>
             </span>
           </Heading>

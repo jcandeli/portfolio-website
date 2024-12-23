@@ -153,7 +153,7 @@ function Navigation() {
           </FocusTrap>
         </NavItem>
         <NavItem>
-          <NavLink href="/about-me">About me</NavLink>
+          <NavLink href="/about-me">About</NavLink>
         </NavItem>
         <NavItem>
           <ExternalLink
