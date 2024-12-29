@@ -12,11 +12,13 @@ const TitleOverlay = styled.figcaption`
   color: white;
   opacity: 0;
   cursor: pointer;
+  transform: translate(0, -16px);
 
   &:hover {
     opacity: 1;
+    transform: translate(0, 0);
   }
-  transition: 600ms;
+  transition: opacity 600ms, transform 300ms;
 `;
 
 export default TitleOverlay;
