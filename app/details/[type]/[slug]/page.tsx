@@ -31,7 +31,7 @@ export async function generateStaticParams() {
 }
 
 export default async function MediaPage({ params }: MediaPageProps) {
-  const { type, slug } = params;
+  const { type, slug } = await params;
   const id = extractIdFromSlug(slug);
 
   // Return 404 immediately if type is music
