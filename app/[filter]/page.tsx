@@ -6,14 +6,16 @@ import mediaData from "@/data/media.json";
 import { Media } from "@/types";
 
 interface FilterPageProps {
-  params: {
+  params: Promise<{
     filter: string;
-  };
+  }>;
 }
 
-export const generateMetadata = ({ params }: FilterPageProps): Metadata => {
-  const capitalizedFilter =
-    params.filter.charAt(0).toUpperCase() + params.filter.slice(1);
+export async function generateMetadata({
+  params,
+}: FilterPageProps): Promise<Metadata> {
+  const { filter } = await params;
+  const capitalizedFilter = filter.charAt(0).toUpperCase() + filter.slice(1);
   return {
     title: `${capitalizedFilter} | JP Candelier`,
     description: `Explore ${capitalizedFilter} by JP Candelier`,
@@ -36,10 +38,10 @@ export const generateMetadata = ({ params }: FilterPageProps): Metadata => {
       images: [`/og-image.png`],
     },
   };
-};
+}
 
-export default function FilterPage({ params }: FilterPageProps) {
-  const { filter } = params;
+export default async function FilterPage({ params }: FilterPageProps) {
+  const { filter } = await params;
   const allowedFilters = ["photos", "designs", "music"];
 
   if (!allowedFilters.includes(filter.toLowerCase())) {

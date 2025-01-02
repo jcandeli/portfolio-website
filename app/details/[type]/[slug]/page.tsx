@@ -5,10 +5,10 @@ import { DetailsPage } from "./DetailsPage";
 import { createMediaDetailsUrl } from "@/utils/url";
 
 interface MediaPageProps {
-  params: {
+  params: Promise<{
     type: Media["type"];
     slug: string;
-  };
+  }>;
 }
 
 // Helper to extract ID from slug
