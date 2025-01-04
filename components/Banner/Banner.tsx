@@ -31,7 +31,7 @@ const StyledLastName = styled.span`
 
 const StyledSpan = styled.span`
   display: block;
-  letter-spacing: -0.5rem;
+  letter-spacing: -0.4rem;
   @media (max-width: 768px) {
     letter-spacing: -0.3rem;
   }
@@ -39,7 +39,7 @@ const StyledSpan = styled.span`
 
 const StyledSpan2 = styled.span`
   display: block;
-  letter-spacing: -0.8rem;
+  letter-spacing: -0.7rem;
   @media (max-width: 768px) {
     letter-spacing: -0.6rem;
   }
