@@ -19,7 +19,8 @@ const sageregular = localFont({
 
 const getHeadingStyle = (level: number) => {
   const baseStyle = {
-    position: "relative" as const,
+    position: "relative",
+    right: "0.25rem",
     lineHeight: "1.1",
     textWrap: "pretty",
   };

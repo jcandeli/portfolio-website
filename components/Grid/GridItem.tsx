@@ -3,6 +3,7 @@ import { Orientation } from "@/types";
 
 interface GridItemProps {
   orientation?: Orientation;
+  disableBorderRadius?: boolean;
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -10,7 +11,28 @@ const GridItem: StyledComponent<"div", any, GridItemProps> = styled.div`
   grid-column: span 1;
   grid-row: span 1;
   width: 100%;
-  /* background-color: #dfdfdf; */
+  overflow: hidden;
+
+  ${({ disableBorderRadius }) => {
+    // Randomly choose between the two border radius patterns
+    const useTopRightPattern = Math.random() < 0.5;
+
+    if (useTopRightPattern) {
+      return `
+        border-top-right-radius: ${disableBorderRadius ? "0px" : "80px"};
+        border-bottom-left-radius: ${disableBorderRadius ? "0px" : "80px"};
+      `;
+    } else {
+      return `
+        border-top-left-radius: ${disableBorderRadius ? "0px" : "80px"};
+        border-bottom-right-radius: ${disableBorderRadius ? "0px" : "80px"};
+      `;
+    }
+  }}
+  :hover {
+    border-radius: 0px;
+    transition: all 0.1s ease-in-out;
+  }
 
   @media (min-width: 768px) {
     grid-column: span

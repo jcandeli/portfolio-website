@@ -8,16 +8,17 @@ import { useGlobal } from "@/contexts/GlobalContext";
 
 const item = {
   hidden: {
-    opacity: 0,
     y: 40,
+    // filter: "blur(32px)",
   },
   show: {
-    opacity: 1,
     y: 0,
+    // filter: "blur(0px)",
     transition: {
       type: "spring",
       damping: 15,
       stiffness: 100,
+      staggerChildren: 0.25,
     },
   },
 };
@@ -44,6 +45,9 @@ export default function MediaGrid({ media }: { media: Media[] }) {
               as={motion.div}
               key={media.id}
               variants={item}
+              initial="hidden"
+              animate="show"
+              exit="hidden"
               orientation={
                 media.type === "photo" ||
                 media.type === "design" ||
@@ -51,6 +55,7 @@ export default function MediaGrid({ media }: { media: Media[] }) {
                   ? (media as Photo).orientation
                   : undefined
               }
+              disableBorderRadius={media.type === "music"}
             >
               {media.type === "music" ? (
                 <MediaCard media={media} />

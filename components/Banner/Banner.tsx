@@ -60,7 +60,7 @@ export default function Banner() {
 
   return (
     <Grid>
-      <GridItem orientation="vertical">
+      <GridItem orientation="vertical" disableBorderRadius>
         <StyledHeading>
           <Heading level={1} className="h1">
             <span className="visually-hidden">JP Candelier</span>
