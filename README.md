@@ -15,12 +15,13 @@ Built with:
 - [Next.js 14](https://nextjs.org/) - React framework with App Router
 - [TypeScript](https://www.typescriptlang.org/) - Type-safe JavaScript
 - [Emotion CSS](https://emotion.sh/) - CSS-in-JS styling
+- [Framer Motion](https://www.framer.com/motion/) - Animation library for React
 - [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
 
 ## Features
 
 - Responsive grid layout optimized for different media types
-- Custom font integration (Bebas Neue) for distinctive typography
+- Custom font integration for distinctive typography
 - Dropdown navigation for content filtering
 - Optimized image loading and responsive design
 - Server-side rendering for optimal performance
