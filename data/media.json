@@ -5,7 +5,8 @@
     "title": "Multiple Exposure",
     "description": "Mae Hong Son, Thailand",
     "camera": "Diana Camera",
-    "homepageHidden": true
+    "homepageHidden": true,
+    "filteredOrder": 1
   },
   {
     "id": "biggie.jpg",
@@ -26,7 +27,8 @@
     "id": "3449012140_ebfbc1a8dc_b.jpg",
     "title": "Myra Flynn",
     "description": "Burlington, Vermont",
-    "camera": "Kiev 60TTL"
+    "camera": "Kiev 60TTL",
+    "filteredOrder": 4
   },
   {
     "type": "photo",
@@ -34,7 +36,8 @@
     "title": "Observatory",
     "description": "Jaipur, India",
     "camera": "Olympus XA",
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "filteredOrder": 2
   },
   {
     "type": "photo",
@@ -42,7 +45,8 @@
     "title": "Hermosa",
     "description": "Los Angeles",
     "camera": "Diana camera",
-    "orientation": "block"
+    "orientation": "block",
+    "filteredOrder": 3
   },
   {
     "id": "5214247101_fbfca1e0eb_z.jpg",
@@ -57,7 +61,8 @@
     "id": "3753094794_27acbc6ae8.jpg",
     "title": "Sinking",
     "description": "Burlington, Vermont",
-    "camera": "Kiev 60TTL"
+    "camera": "Kiev 60TTL",
+    "filteredOrder": 5
   },
   {
     "id": "freshest.jpg",
@@ -251,7 +256,7 @@
     "type": "music",
     "id": "892770742",
     "title": "Flood the Block",
-    "filteredOrder": 8
+    "filteredOrder": 7
   },
   {
     "id": "5176407528_574695a7e0.jpg",
@@ -296,7 +301,7 @@
     "title": "Kiefer - Why not?",
     "id": "2u8cAGSMFjE",
     "orientation": "horizontal",
-    "filteredOrder": 7
+    "filteredOrder": 6
   },
   {
     "type": "photo",
@@ -341,7 +346,7 @@
     "type": "music",
     "id": "1262846917",
     "title": "Take your time",
-    "filteredOrder": 9
+    "filteredOrder": 10
   },
   {
     "id": "invisible homes.jpg",
@@ -402,7 +407,7 @@
     "description": "Bass cover",
     "id": "-yZ6-Hu39Bs",
     "orientation": "horizontal",
-    "filteredOrder": 10
+    "filteredOrder": 8
   },
   {
     "id": "49751522103_937c0337fe_k.jpg",
@@ -423,13 +428,13 @@
     "type": "music",
     "id": "602189412",
     "title": "Princess",
-    "filteredOrder": 13
+    "filteredOrder": 11
   },
   {
     "type": "video",
     "title": "Jorja Smith - On My Mind",
     "id": "hXEyn5RnhUk",
     "orientation": "horizontal",
-    "filteredOrder": 11
+    "filteredOrder": 9
   }
 ]
