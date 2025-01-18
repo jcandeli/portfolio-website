@@ -9,11 +9,11 @@ const bebasNeue = Bebas_Neue({
   preload: true,
 });
 
-const sageregular = localFont({
-  src: "../../public/fonts/sunflora-webfont.woff2",
+const sophilliaRegular = localFont({
+  src: "../../public/fonts/sophillia-webfont.woff2",
   weight: "400",
   display: "block",
-  variable: "--font-sageregular",
+  variable: "--font-sophillia-regular",
   preload: true,
 });
 
@@ -62,7 +62,8 @@ export default function Heading({
   const HeadingTag = `h${level}` as const;
   const headingStyle = getHeadingStyle(level);
 
-  const fontClass = level === 1 ? sageregular.className : bebasNeue.className;
+  const fontClass =
+    level === 1 ? sophilliaRegular.className : bebasNeue.className;
 
   return (
     <HeadingTag

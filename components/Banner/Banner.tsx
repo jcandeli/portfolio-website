@@ -31,7 +31,6 @@ const StyledLastName = styled.span`
 
 const StyledSpan = styled.span`
   display: block;
-  letter-spacing: -0.4rem;
   @media (max-width: 768px) {
     letter-spacing: -0.3rem;
   }
@@ -39,10 +38,7 @@ const StyledSpan = styled.span`
 
 const StyledSpan2 = styled.span`
   display: block;
-  letter-spacing: -0.7rem;
-  @media (max-width: 768px) {
-    letter-spacing: -0.6rem;
-  }
+  letter-spacing: -0.5rem;
 `;
 
 export default function Banner() {
@@ -65,8 +61,8 @@ export default function Banner() {
           <Heading level={1} className="h1">
             <span className="visually-hidden">JP Candelier</span>
             <span aria-hidden="true">
-              <StyledSpan>JP</StyledSpan>
               <StyledLastName>
+                <StyledSpan>JP</StyledSpan>
                 <StyledSpan>Can</StyledSpan>
                 <StyledSpan>de</StyledSpan>
                 <StyledSpan2>lier</StyledSpan2>
