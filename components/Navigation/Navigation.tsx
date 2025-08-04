@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import styled from "@emotion/styled";
+import { keyframes } from "@emotion/react";
 import { ChevronDown, Moon, Sun } from "lucide-react";
 import FocusTrap from "focus-trap-react";
 import { useGlobal } from "@/contexts/GlobalContext";
@@ -63,6 +64,28 @@ const ExternalLink = styled.a`
   }
 `;
 
+const slideInFromTop = keyframes`
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
+
+const slideInFromBottom = keyframes`
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
+
 const ThemeButton = styled.button`
   background: none;
   border: none;
@@ -72,10 +95,19 @@ const ThemeButton = styled.button`
   align-items: center;
   padding: 0.5rem;
   border-radius: 4px;
+  position: relative;
+  width: 32px;
+  height: 32px;
 
   &:hover {
     background-color: var(--secondary);
   }
+`;
+
+const IconContainer = styled.div<{ isDarkMode: boolean }>`
+  animation: ${({ isDarkMode }) =>
+      isDarkMode ? slideInFromTop : slideInFromBottom}
+    0.3s ease-out;
 `;
 
 function Navigation() {
@@ -180,7 +212,9 @@ function Navigation() {
               isDarkMode ? "Switch to light mode" : "Switch to dark mode"
             }
           >
-            {isDarkMode ? <Sun size={16} /> : <Moon size={16} />}
+            <IconContainer isDarkMode={isDarkMode}>
+              {isDarkMode ? <Moon size={16} /> : <Sun size={16} />}
+            </IconContainer>
           </ThemeButton>
         </NavItem>
       </NavList>
