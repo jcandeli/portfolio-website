@@ -30,19 +30,19 @@ const StyledLastName = styled.span`
 `;
 
 const StyledSpan = styled.span`
-  display: block;
-  letter-spacing: -0.4rem;
+  /* display: block; */
+  /* letter-spacing: -0.4rem;
   @media (max-width: 768px) {
     letter-spacing: -0.3rem;
-  }
+  } */
 `;
 
 const StyledSpan2 = styled.span`
-  display: block;
-  letter-spacing: -0.7rem;
+  /* display: block; */
+  /* letter-spacing: -0.7rem;
   @media (max-width: 768px) {
     letter-spacing: -0.6rem;
-  }
+  } */
 `;
 
 export default function Banner() {
@@ -65,9 +65,9 @@ export default function Banner() {
           <Heading level={1} className="h1">
             <span className="visually-hidden">JP Candelier</span>
             <span aria-hidden="true">
-              <StyledSpan>JP</StyledSpan>
+              <StyledSpan>jp</StyledSpan>
               <StyledLastName>
-                <StyledSpan>Can</StyledSpan>
+                <StyledSpan>can</StyledSpan>
                 <StyledSpan>de</StyledSpan>
                 <StyledSpan2>lier</StyledSpan2>
               </StyledLastName>

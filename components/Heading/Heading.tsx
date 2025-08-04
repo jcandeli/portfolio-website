@@ -9,11 +9,11 @@ const bebasNeue = Bebas_Neue({
   preload: true,
 });
 
-const sageregular = localFont({
-  src: "../../public/fonts/sunflora-webfont.woff2",
+const monkeymind = localFont({
+  src: "../../public/fonts/monkey-mind-sans.woff2",
   weight: "400",
   display: "block",
-  variable: "--font-sageregular",
+  variable: "--font-monkeymind",
   preload: true,
 });
 
@@ -29,7 +29,7 @@ const getHeadingStyle = (level: number) => {
     return {
       ...baseStyle,
       fontSize: "min(12.5vw, 195px)",
-      textTransform: "uppercase",
+      // textTransform: "uppercase",
     } as const;
   } else if (level === 2) {
     return {
@@ -62,7 +62,7 @@ export default function Heading({
   const HeadingTag = `h${level}` as const;
   const headingStyle = getHeadingStyle(level);
 
-  const fontClass = level === 1 ? sageregular.className : bebasNeue.className;
+  const fontClass = level === 1 ? monkeymind.className : bebasNeue.className;
 
   return (
     <HeadingTag
