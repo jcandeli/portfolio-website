@@ -74,12 +74,18 @@ interface ModalProps {
 }
 
 const Modal = ({ isOpen, onClose, children, id, detailsUrl }: ModalProps) => {
-  const { setSelectedMedia } = useGlobal();
+  const { setSelectedMedia, navigateToNext, navigateToPrevious } = useGlobal();
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape" && onClose) {
         onClose();
+      } else if (event.key === "ArrowRight") {
+        event.preventDefault();
+        navigateToNext();
+      } else if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        navigateToPrevious();
       }
     };
 

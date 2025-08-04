@@ -1,12 +1,17 @@
 "use client";
 
+import { useEffect } from "react";
 import Grid, { GridItem } from "@/components/Grid";
 import MediaCard from "@/components/MediaCard";
 import { Media, Photo } from "@/types";
 import { useGlobal } from "@/contexts/GlobalContext";
 
 export default function MediaGrid({ media }: { media: Media[] }) {
-  const { setSelectedMedia } = useGlobal();
+  const { setSelectedMedia, setCurrentMediaList } = useGlobal();
+
+  useEffect(() => {
+    setCurrentMediaList(media);
+  }, [media, setCurrentMediaList]);
 
   const handleMediaClick = (media: Media) => {
     if (

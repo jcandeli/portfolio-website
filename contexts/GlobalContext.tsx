@@ -1,6 +1,6 @@
 "use client";
 
-import { Design, Photo, Video } from "@/types";
+import { Design, Photo, Video, Media } from "@/types";
 import {
   createContext,
   useContext,
@@ -12,7 +12,11 @@ import {
 interface GlobalContextType {
   selectedMedia: Video | Photo | Design | null;
   isDarkMode: boolean;
+  currentMediaList: Media[];
   setSelectedMedia: (media: Video | Photo | Design | null) => void;
+  setCurrentMediaList: (media: Media[]) => void;
+  navigateToNext: () => void;
+  navigateToPrevious: () => void;
   toggleTheme: () => void;
 }
 
@@ -22,6 +26,7 @@ export function GlobalProvider({ children }: { children: ReactNode }) {
   const [selectedMedia, setSelectedMedia] = useState<
     Video | Photo | Design | null
   >(null);
+  const [currentMediaList, setCurrentMediaList] = useState<Media[]>([]);
 
   const [isDarkMode, setIsDarkMode] = useState(() => {
     // Check if we're in a browser environment
@@ -30,6 +35,44 @@ export function GlobalProvider({ children }: { children: ReactNode }) {
     }
     return false; // Default to light mode on server
   });
+
+  const navigateToNext = () => {
+    if (!selectedMedia || currentMediaList.length === 0) return;
+
+    // Filter out music items since they don't use modals
+    const modalMediaList = currentMediaList.filter(
+      (media) => media.type !== "music"
+    );
+
+    const currentIndex = modalMediaList.findIndex(
+      (media) => media.id === selectedMedia.id
+    );
+
+    if (currentIndex !== -1 && currentIndex < modalMediaList.length - 1) {
+      setSelectedMedia(
+        modalMediaList[currentIndex + 1] as Video | Photo | Design
+      );
+    }
+  };
+
+  const navigateToPrevious = () => {
+    if (!selectedMedia || currentMediaList.length === 0) return;
+
+    // Filter out music items since they don't use modals
+    const modalMediaList = currentMediaList.filter(
+      (media) => media.type !== "music"
+    );
+
+    const currentIndex = modalMediaList.findIndex(
+      (media) => media.id === selectedMedia.id
+    );
+
+    if (currentIndex > 0) {
+      setSelectedMedia(
+        modalMediaList[currentIndex - 1] as Video | Photo | Design
+      );
+    }
+  };
 
   useEffect(() => {
     // Listen for system theme changes
@@ -49,7 +92,11 @@ export function GlobalProvider({ children }: { children: ReactNode }) {
       value={{
         selectedMedia,
         isDarkMode,
+        currentMediaList,
         setSelectedMedia,
+        setCurrentMediaList,
+        navigateToNext,
+        navigateToPrevious,
         toggleTheme,
       }}
     >

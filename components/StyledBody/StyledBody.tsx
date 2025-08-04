@@ -1,6 +1,7 @@
 "use client";
 import styled from "@emotion/styled";
 import { Roboto } from "next/font/google";
+import { motion, AnimatePresence } from "framer-motion";
 import { useGlobal } from "@/contexts/GlobalContext";
 import Modal from "@/components/Modal";
 import { createMediaDetailsUrl } from "@/utils/url";
@@ -63,38 +64,53 @@ export function StyledBody({ children }: { children: React.ReactNode }) {
   return (
     <Body isDarkMode={isDarkMode} className={roboto.className}>
       {children}
-      {selectedMedia && (
-        <Modal
-          isOpen
-          onClose={handleCloseModal}
-          aria-label={`${selectedMedia.title} details`}
-          id="media-modal"
-          detailsUrl={createMediaDetailsUrl(
-            selectedMedia.type,
-            selectedMedia.title,
-            selectedMedia.id
-          )}
-        >
-          <ModalContent>
-            {selectedMedia.type === "video" ? (
-              <VideoFrame
-                title="YouTube Video Player"
-                src={`https://www.youtube.com/embed/${selectedMedia.id}?autoplay=1`}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            ) : (
-              <Image
-                src={`/portfolio/${selectedMedia.type}/${selectedMedia.id}`}
-                alt={`${selectedMedia.title}`}
-              />
+      <AnimatePresence mode="wait">
+        {selectedMedia && (
+          <Modal
+            isOpen
+            onClose={handleCloseModal}
+            aria-label={`${selectedMedia.title} details`}
+            id="media-modal"
+            detailsUrl={createMediaDetailsUrl(
+              selectedMedia.type,
+              selectedMedia.title,
+              selectedMedia.id
             )}
-            <ImageCaption>
-              <MediaDetails media={selectedMedia} />
-            </ImageCaption>
-          </ModalContent>
-        </Modal>
-      )}
+          >
+            <motion.div
+              key={selectedMedia.id}
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -50 }}
+              transition={{
+                type: "spring",
+                stiffness: 300,
+                damping: 30,
+                duration: 0.3,
+              }}
+            >
+              <ModalContent>
+                {selectedMedia.type === "video" ? (
+                  <VideoFrame
+                    title="YouTube Video Player"
+                    src={`https://www.youtube.com/embed/${selectedMedia.id}?autoplay=1`}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                ) : (
+                  <Image
+                    src={`/portfolio/${selectedMedia.type}/${selectedMedia.id}`}
+                    alt={`${selectedMedia.title}`}
+                  />
+                )}
+                <ImageCaption>
+                  <MediaDetails media={selectedMedia} />
+                </ImageCaption>
+              </ModalContent>
+            </motion.div>
+          </Modal>
+        )}
+      </AnimatePresence>
     </Body>
   );
 }
