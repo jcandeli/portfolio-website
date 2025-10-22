@@ -95,9 +95,15 @@ export default function GradientBlob({
   const gradients = overlayColors
     .map((color, i) => {
       const pos = positions[i];
-      // Keep most of the circle solid, only fade at the edges (last 20%)
-      const fadeStart = Math.max(0, pos.size - 25);
-      return `radial-gradient(circle at ${pos.x}% ${pos.y}%, ${color} 0%, ${color} ${fadeStart}%, transparent ${pos.size}%)`;
+      // Ultra-smooth gradient with 7 stops for maximum smoothness
+      // Tiny solid core with very gradual fade throughout
+      const stop1 = pos.size * 0.15; // Tiny solid core (15%)
+      const stop2 = pos.size * 0.35; // 95% opacity
+      const stop3 = pos.size * 0.5; // 80% opacity
+      const stop4 = pos.size * 0.65; // 60% opacity
+      const stop5 = pos.size * 0.75; // 40% opacity
+      const stop6 = pos.size * 0.85; // 20% opacity
+      return `radial-gradient(circle at ${pos.x}% ${pos.y}%, ${color} 0%, ${color} ${stop1}%, ${color}F2 ${stop2}%, ${color}CC ${stop3}%, ${color}99 ${stop4}%, ${color}66 ${stop5}%, ${color}33 ${stop6}%, transparent ${pos.size}%)`;
     })
     .join(", ");
 

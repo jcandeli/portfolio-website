@@ -42,6 +42,20 @@ const Label = styled.span`
   text-align: center;
 `;
 
+const SwatchContainer = styled.div`
+  display: flex;
+  gap: 0.25rem;
+  margin-top: 0.25rem;
+`;
+
+const Swatch = styled.div<{ $color: string }>`
+  width: 32px;
+  height: 32px;
+  background-color: ${(props) => props.$color};
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+`;
+
 // Filter media items that have colors (photos and designs)
 const mediaWithColors = mediaData.filter(
   (
@@ -63,6 +77,11 @@ export default function GradientsPage() {
               colorProportions={item.colorProportions}
             />
             <Label>{item.title}</Label>
+            <SwatchContainer>
+              {item.colors.map((color, index) => (
+                <Swatch key={`${item.id}-${index}`} $color={color} />
+              ))}
+            </SwatchContainer>
           </BlobWrapper>
         ))}
       </Grid>
