@@ -6,7 +6,19 @@
     "description": "Mae Hong Son, Thailand",
     "camera": "Diana Camera",
     "homepageHidden": true,
-    "filteredOrder": 1
+    "filteredOrder": 1,
+    "colors": [
+      "#045373",
+      "#13b1cb",
+      "#9bd0d3",
+      "#67afad"
+    ],
+    "colorProportions": [
+      0.45630126356962764,
+      0.15977683492992245,
+      0.3283350620512593,
+      0.055586839449190635
+    ]
   },
   {
     "id": "biggie.jpg",
@@ -14,7 +26,19 @@
     "title": "Biggie",
     "description": "Digital art",
     "orientation": "vertical",
-    "filteredOrder": 1
+    "filteredOrder": 1,
+    "colors": [
+      "#efa31c",
+      "#ac300c",
+      "#dd8a70",
+      "#7b331d"
+    ],
+    "colorProportions": [
+      0.9519634808259245,
+      0.0018445556125146884,
+      0.04619196356156091,
+      0
+    ]
   },
   {
     "type": "music",
@@ -28,7 +52,19 @@
     "title": "Myra Flynn",
     "description": "Burlington, Vermont",
     "camera": "Kiev 60TTL",
-    "filteredOrder": 4
+    "filteredOrder": 4,
+    "colors": [
+      "#c2ccaf",
+      "#c1802d",
+      "#1b4a73",
+      "#e0d5a3"
+    ],
+    "colorProportions": [
+      0.5105069802379353,
+      0.03028313787032207,
+      0.06384363689859045,
+      0.3953662449931522
+    ]
   },
   {
     "type": "photo",
@@ -37,7 +73,19 @@
     "description": "Jaipur, India",
     "camera": "Olympus XA",
     "orientation": "horizontal",
-    "filteredOrder": 2
+    "filteredOrder": 2,
+    "colors": [
+      "#fcda87",
+      "#956a03",
+      "#8c0f04",
+      "#940f04"
+    ],
+    "colorProportions": [
+      0.5015156173626072,
+      0,
+      0.4984843826373928,
+      0
+    ]
   },
   {
     "type": "photo",
@@ -46,7 +94,19 @@
     "description": "Los Angeles",
     "camera": "Diana camera",
     "orientation": "block",
-    "filteredOrder": 3
+    "filteredOrder": 3,
+    "colors": [
+      "#a37d49",
+      "#0f5da1",
+      "#2b98c5",
+      "#d9cca6"
+    ],
+    "colorProportions": [
+      0.41908668633881463,
+      0.10593258632605604,
+      0.10823272077763835,
+      0.366748006557491
+    ]
   },
   {
     "id": "5214247101_fbfca1e0eb_z.jpg",
@@ -54,7 +114,19 @@
     "title": "N'Goni Dub Trio",
     "description": "Band poster",
     "orientation": "vertical",
-    "filteredOrder": 5
+    "filteredOrder": 5,
+    "colors": [
+      "#704f0a",
+      "#f4ce20",
+      "#84f279",
+      "#612c59"
+    ],
+    "colorProportions": [
+      0.9730860668403049,
+      0.0021400028508981065,
+      0.010800310000393535,
+      0.013973620308403469
+    ]
   },
   {
     "type": "photo",
@@ -62,7 +134,19 @@
     "title": "Sinking",
     "description": "Burlington, Vermont",
     "camera": "Kiev 60TTL",
-    "filteredOrder": 5
+    "filteredOrder": 5,
+    "colors": [
+      "#98e1e4",
+      "#247470",
+      "#4bb4aa",
+      "#9ccccc"
+    ],
+    "colorProportions": [
+      0.9528474267878184,
+      0.013096670742669127,
+      0.033630983782498146,
+      0.00042491868701427597
+    ]
   },
   {
     "id": "freshest.jpg",
@@ -70,7 +154,19 @@
     "title": "The Fresh Establishment",
     "description": "Band poster",
     "orientation": "horizontal",
-    "filteredOrder": 2
+    "filteredOrder": 2,
+    "colors": [
+      "#240c6c",
+      "#cc2c4c",
+      "#b3e3eb",
+      "#5e4c94"
+    ],
+    "colorProportions": [
+      0.3706614759030073,
+      0.3541313788775254,
+      0.2750722363707215,
+      0.00013490884874601858
+    ]
   },
   {
     "type": "photo",
@@ -78,7 +174,19 @@
     "title": "Lanterns",
     "camera": "Nikon D90",
     "description": "Hoi An, Vietnam",
-    "orientation": "banner"
+    "orientation": "banner",
+    "colors": [
+      "#cea999",
+      "#750f18",
+      "#be6e1e",
+      "#e9cb8b"
+    ],
+    "colorProportions": [
+      0.3760432239590485,
+      0.1615736025838845,
+      0.1553252855893003,
+      0.3070578878677667
+    ]
   },
   {
     "type": "photo",
@@ -86,7 +194,19 @@
     "title": "Whistler",
     "description": "Hue, Vietnam",
     "camera": "Nikon D750",
-    "orientation": "vertical"
+    "orientation": "vertical",
+    "colors": [
+      "#4c89bf",
+      "#045494",
+      "#8fb7d5",
+      "#2d564d"
+    ],
+    "colorProportions": [
+      0.7251380812530225,
+      0.009173857296371988,
+      0.18523044719317092,
+      0.08045761425743451
+    ]
   },
   {
     "type": "photo",
@@ -94,7 +214,19 @@
     "title": "Canals",
     "description": "Kerala, India",
     "camera": "Diana Camera",
-    "orientation": "block"
+    "orientation": "block",
+    "colors": [
+      "#c8abac",
+      "#bdd784",
+      "#bf5444",
+      "#5f2d24"
+    ],
+    "colorProportions": [
+      0.811911393213843,
+      0.03262713323486486,
+      0.07170364093068397,
+      0.08375783262060803
+    ]
   },
   {
     "type": "photo",
@@ -102,7 +234,19 @@
     "title": "The Pham",
     "description": "Los Angeles",
     "camera": "Nikon D90",
-    "orientation": "vertical"
+    "orientation": "vertical",
+    "colors": [
+      "#072433",
+      "#38a4d3",
+      "#91cee6",
+      "#5b80a8"
+    ],
+    "colorProportions": [
+      0.9035894498910564,
+      0.0013004814276236542,
+      0.006756248584452835,
+      0.0883538200968671
+    ]
   },
   {
     "id": "elevator.jpg",
@@ -110,28 +254,76 @@
     "title": "The Elevator",
     "description": "Digital art",
     "orientation": "horizontal",
-    "filteredOrder": 6
+    "filteredOrder": 6,
+    "colors": [
+      "#4e4a33",
+      "#f1d987",
+      "#d9ac18",
+      "#6c5411"
+    ],
+    "colorProportions": [
+      0.9934064577543656,
+      0,
+      0.005637981933019914,
+      0.0009555603126144119
+    ]
   },
   {
     "type": "photo",
     "id": "4109568218_010e24e2e5_o.jpg",
     "title": "Hunter and Phereal",
     "description": "Burglinton, Vermont",
-    "camera": "Holga"
+    "camera": "Holga",
+    "colors": [
+      "#faf4ef",
+      "#653f1f",
+      "#c2793c",
+      "#d3c5be"
+    ],
+    "colorProportions": [
+      0.567950294489878,
+      0,
+      0,
+      0.4320497055101221
+    ]
   },
   {
     "type": "photo",
     "id": "2546592236_144d013dc2_o.jpg",
     "title": "Rubblebucket",
     "description": "Burlington, Vermont",
-    "camera": "Kiev 60TTL"
+    "camera": "Kiev 60TTL",
+    "colors": [
+      "#c2a677",
+      "#ecd88c",
+      "#174b4c",
+      "#634e31"
+    ],
+    "colorProportions": [
+      0.753257998993305,
+      0.00048602174741481103,
+      0.008221888129004677,
+      0.23803409113027546
+    ]
   },
   {
     "type": "photo",
     "id": "cm-temple.jpg",
     "title": "Wat Phra That",
     "description": "Chiang Mai, Thailand",
-    "camera": "Diana Camera"
+    "camera": "Diana Camera",
+    "colors": [
+      "#f1eb07",
+      "#f3f25b",
+      "#725609",
+      "#accc8c"
+    ],
+    "colorProportions": [
+      0.6892944627357127,
+      0.10439606551634145,
+      0.206227608628153,
+      0.00008186311979281179
+    ]
   },
   {
     "type": "video",
@@ -147,7 +339,19 @@
     "title": "Tyler",
     "description": "Digital art",
     "orientation": "vertical",
-    "filteredOrder": 10
+    "filteredOrder": 10,
+    "colors": [
+      "#d4acdc",
+      "#131956",
+      "#6269b4",
+      "#383366"
+    ],
+    "colorProportions": [
+      0.6775782192583819,
+      0.28670338132486967,
+      0.003223754491844028,
+      0.03249464492490445
+    ]
   },
   {
     "type": "music",
@@ -160,7 +364,19 @@
     "id": "2546430828_a764bee6be_o.jpg",
     "title": "Alex Toth",
     "description": "Burlington, Vermont",
-    "camera": "Kiev 60TTL"
+    "camera": "Kiev 60TTL",
+    "colors": [
+      "#2f5125",
+      "#888bdc",
+      "#3d93ad",
+      "#44542d"
+    ],
+    "colorProportions": [
+      0.7448982870540151,
+      0.003201745749803171,
+      0.15516132569121033,
+      0.09673864150497145
+    ]
   },
   {
     "type": "photo",
@@ -168,7 +384,19 @@
     "title": "Slum",
     "description": "Chenai, India",
     "camera": "Nikon D90",
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "colors": [
+      "#1f8df8",
+      "#053685",
+      "#f97784",
+      "#75433a"
+    ],
+    "colorProportions": [
+      0.3589058534639436,
+      0.33007032416567855,
+      0.08345754195809549,
+      0.22756628041228252
+    ]
   },
   {
     "type": "photo",
@@ -176,7 +404,19 @@
     "title": "Cock",
     "description": "Hoi An, Vietnam",
     "camera": "Nikon D750",
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "colors": [
+      "#b1afa9",
+      "#510c16",
+      "#c43936",
+      "#dfcaab"
+    ],
+    "colorProportions": [
+      0.9122292563134904,
+      0.005826540638230448,
+      0.027049072029996863,
+      0.05489513101828226
+    ]
   },
   {
     "type": "photo",
@@ -184,21 +424,57 @@
     "title": "Nedia",
     "description": "",
     "camera": "Yashican Electro",
-    "orientation": "vertical"
+    "orientation": "vertical",
+    "colors": [
+      "#7f7f7f",
+      "#424242",
+      "#bcbcbc",
+      "#838383"
+    ],
+    "colorProportions": [
+      0,
+      0,
+      0,
+      1
+    ]
   },
   {
     "type": "photo",
     "id": "3328487560_0e6a9d531b_b.jpg",
     "title": "School",
     "description": "Mayanmar",
-    "camera": "Kiev 60TTL"
+    "camera": "Kiev 60TTL",
+    "colors": [
+      "#c4874b",
+      "#7f120d",
+      "#dbad7c",
+      "#a27746"
+    ],
+    "colorProportions": [
+      0.48684341852372015,
+      0.1583783330218202,
+      0.21738809398716502,
+      0.13739015446729472
+    ]
   },
   {
     "type": "photo",
     "id": "190747690_73868f6030_o.jpg",
     "title": "Dominican Rider",
     "description": "Dominican Republic",
-    "camera": "Holga"
+    "camera": "Holga",
+    "colors": [
+      "#5f4128",
+      "#ecdcd4",
+      "#6c4c30",
+      "#634c2e"
+    ],
+    "colorProportions": [
+      0.547613279102544,
+      0.03482256904674757,
+      0.30651152402560805,
+      0.11105262782510042
+    ]
   },
   {
     "type": "photo",
@@ -206,14 +482,38 @@
     "title": "Slum",
     "description": "Chenai, India",
     "camera": "Nikon D90",
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "colors": [
+      "#e7c394",
+      "#f19e3d",
+      "#703d21",
+      "#d6c1a0"
+    ],
+    "colorProportions": [
+      0.42720773656239225,
+      0.04021560276490607,
+      0.21000010168833336,
+      0.3225765589843684
+    ]
   },
   {
     "type": "photo",
     "id": "311278822_a0f27908ce_o.jpg",
     "title": "Lake Champlain",
     "description": "Burlington, Vermont",
-    "camera": "Polaroid SX-70"
+    "camera": "Polaroid SX-70",
+    "colors": [
+      "#323651",
+      "#646e8c",
+      "#adb1c4",
+      "#6a7194"
+    ],
+    "colorProportions": [
+      0.7386798557839833,
+      0.2054013636991711,
+      0.055918780516845505,
+      0
+    ]
   },
   {
     "type": "music",
@@ -227,7 +527,19 @@
     "title": "Barika",
     "description": "Band poster",
     "orientation": "horizontal",
-    "filteredOrder": 3
+    "filteredOrder": 3,
+    "colors": [
+      "#e7c81a",
+      "#950403",
+      "#9c0504",
+      "#dcc791"
+    ],
+    "colorProportions": [
+      0.4048415302332834,
+      0,
+      0.3721357109977259,
+      0.2230227587689906
+    ]
   },
   {
     "type": "photo",
@@ -235,7 +547,19 @@
     "title": "The White Temple",
     "description": "Chiang Rai, Thailand",
     "camera": "Diana camera",
-    "orientation": "block"
+    "orientation": "block",
+    "colors": [
+      "#044669",
+      "#05add4",
+      "#cfdeb6",
+      "#82a458"
+    ],
+    "colorProportions": [
+      0.513301946536165,
+      0.0009528977643072125,
+      0.48283305192195825,
+      0.002912103777569599
+    ]
   },
   {
     "type": "photo",
@@ -243,14 +567,38 @@
     "title": "Sue",
     "description": "Hoi An, Vietnam",
     "camera": "Nikon D750",
-    "orientation": "vertical"
+    "orientation": "vertical",
+    "colors": [
+      "#68463a",
+      "#eeb8a7",
+      "#91b9d4",
+      "#426c2c"
+    ],
+    "colorProportions": [
+      0.5528642942025034,
+      0.4391910556733891,
+      0.006199733647056072,
+      0.0017449164770513166
+    ]
   },
   {
     "type": "photo",
     "id": "2659510934_abea2003cc_o.jpg",
     "title": "Lake Champlain",
     "description": "Burlington, Vermont",
-    "camera": "Holga"
+    "camera": "Holga",
+    "colors": [
+      "#8e7f69",
+      "#f0cd9c",
+      "#7c4414",
+      "#b8844c"
+    ],
+    "colorProportions": [
+      0.931163188840445,
+      0.06495896012493477,
+      0.000333853280440539,
+      0.0035439977541796334
+    ]
   },
   {
     "type": "music",
@@ -264,7 +612,19 @@
     "title": "Barika",
     "description": "Band poster",
     "orientation": "vertical",
-    "filteredOrder": 7
+    "filteredOrder": 7,
+    "colors": [
+      "#6de5d4",
+      "#047a78",
+      "#049491",
+      "#0bd3e9"
+    ],
+    "colorProportions": [
+      0.4825936432245324,
+      0.22975732478521083,
+      0,
+      0.2876490319902568
+    ]
   },
   {
     "type": "video",
@@ -280,21 +640,57 @@
     "title": "Tiffany Pfieffer",
     "description": "Band poster",
     "orientation": "vertical",
-    "filteredOrder": 8
+    "filteredOrder": 8,
+    "colors": [
+      "#ebfab4",
+      "#395f11",
+      "#c0343d",
+      "#4e3628"
+    ],
+    "colorProportions": [
+      0.5566338078524128,
+      0.20697513439910864,
+      0.1738114989285106,
+      0.06257955881996806
+    ]
   },
   {
     "type": "photo",
     "id": "3529806366_6701f0a2a7_b.jpg",
     "title": "Swamp",
     "description": "Bethel, Vermont",
-    "camera": "Kiev 60TTL"
+    "camera": "Kiev 60TTL",
+    "colors": [
+      "#4c3f2f",
+      "#dddd9b",
+      "#bfbf3f",
+      "#0c0c04"
+    ],
+    "colorProportions": [
+      0.7417305639274144,
+      0,
+      0,
+      0.25826943607258557
+    ]
   },
   {
     "type": "photo",
     "id": "2548361624_59f78d758a_o.jpg",
     "title": "Rubblebucket",
     "description": "Burlington, Vermont",
-    "camera": "Kiev 60TTL"
+    "camera": "Kiev 60TTL",
+    "colors": [
+      "#806a5f",
+      "#58461b",
+      "#7c3428",
+      "#dea49a"
+    ],
+    "colorProportions": [
+      0.9922569260082246,
+      0.006467228190844864,
+      0.001275845800930511,
+      0
+    ]
   },
   {
     "type": "video",
@@ -309,14 +705,38 @@
     "title": "Hoi An",
     "description": "Hoi An, Vietnam",
     "camera": "Nikon D750",
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "colors": [
+      "#a18153",
+      "#f4c673",
+      "#780c1c",
+      "#c99743"
+    ],
+    "colorProportions": [
+      0.8035420464760624,
+      0.1728983237505691,
+      0.0022648102063238477,
+      0.021294819567044595
+    ]
   },
   {
     "type": "photo",
     "id": "2752556585_da212416f7_o.jpg",
     "title": "Parking Garage",
     "description": "Burlington, Vermont",
-    "camera": "Holga"
+    "camera": "Holga",
+    "colors": [
+      "#5c3d23",
+      "#74542c",
+      "#dac09e",
+      "#7c6042"
+    ],
+    "colorProportions": [
+      0.5133577296364249,
+      0.0016250520394318333,
+      0,
+      0.48501721832414313
+    ]
   },
   {
     "id": "kina-zore-bishops.jpg",
@@ -324,7 +744,19 @@
     "title": "Kina Zore",
     "description": "Band poster",
     "orientation": "vertical",
-    "filteredOrder": 9
+    "filteredOrder": 9,
+    "colors": [
+      "#bf2424",
+      "#ec1e25",
+      "#8d0b10",
+      "#801818"
+    ],
+    "colorProportions": [
+      0.8192540094471903,
+      0.18074599055280977,
+      0,
+      0
+    ]
   },
   {
     "id": "49755678801_e20169b22b_k.jpg",
@@ -332,7 +764,19 @@
     "title": "1989",
     "description": "Digital art",
     "orientation": "vertical",
-    "filteredOrder": 11
+    "filteredOrder": 11,
+    "colors": [
+      "#a9b8c7",
+      "#9edcfc",
+      "#a56b13",
+      "#e4ca24"
+    ],
+    "colorProportions": [
+      0.5469092909303369,
+      0.013022394431596364,
+      0.02989638322756149,
+      0.4101719314105053
+    ]
   },
   {
     "id": "barika-malmaiz.jpg",
@@ -340,7 +784,19 @@
     "title": "Barika",
     "description": "Band poster",
     "orientation": "vertical",
-    "filteredOrder": 12
+    "filteredOrder": 12,
+    "colors": [
+      "#cf2f1f",
+      "#bf140c",
+      "#e89e8b",
+      "#b1614f"
+    ],
+    "colorProportions": [
+      0.6547217234591413,
+      0.009080400344760991,
+      0.1393587702557733,
+      0.19683910594032453
+    ]
   },
   {
     "type": "music",
@@ -354,14 +810,38 @@
     "title": "Invisible Homes",
     "description": "Album art",
     "orientation": "horizontal",
-    "filteredOrder": 13
+    "filteredOrder": 13,
+    "colors": [
+      "#703a1b",
+      "#70e4e0",
+      "#5ac0c9",
+      "#4ea4ab"
+    ],
+    "colorProportions": [
+      0.4406220175612111,
+      0.028511109004290085,
+      0.43020765481820905,
+      0.1006592186162898
+    ]
   },
   {
     "type": "photo",
     "id": "3327651843_0b2b74a70c_b.jpg",
     "title": "School",
     "description": "Mayanmar",
-    "camera": "Kiev 60TTL"
+    "camera": "Kiev 60TTL",
+    "colors": [
+      "#cbbc9d",
+      "#a1351e",
+      "#6c1e15",
+      "#dcb482"
+    ],
+    "colorProportions": [
+      0.47196423337229776,
+      0.275518173507896,
+      0.23761586140731533,
+      0.014901731712491073
+    ]
   },
   {
     "type": "photo",
@@ -369,14 +849,38 @@
     "title": "Succulent Sue",
     "description": "Los Angeles",
     "camera": "Nikon D90",
-    "orientation": "vertical"
+    "orientation": "vertical",
+    "colors": [
+      "#718b31",
+      "#eccc8e",
+      "#d49454",
+      "#546e38"
+    ],
+    "colorProportions": [
+      0.5932458216470403,
+      0.3844645415370596,
+      0.005350821327278382,
+      0.016938815488621688
+    ]
   },
   {
     "type": "photo",
     "id": "3328489362_3d5ae9bfcb_b.jpg",
     "title": "Novice",
     "description": "Mayanmar",
-    "camera": "Kiev 60TTL"
+    "camera": "Kiev 60TTL",
+    "colors": [
+      "#691f17",
+      "#d76869",
+      "#c4343c",
+      "#413323"
+    ],
+    "colorProportions": [
+      0.758581043789574,
+      0.11400275559299174,
+      0.0002625884313252549,
+      0.12715361218610902
+    ]
   },
   {
     "id": "49754742701_d8523a3720_k.jpg",
@@ -384,14 +888,38 @@
     "title": "The Projects",
     "description": "Digital art",
     "orientation": "vertical",
-    "filteredOrder": 16
+    "filteredOrder": 16,
+    "colors": [
+      "#d18463",
+      "#dcaa60",
+      "#733b2f",
+      "#c2b796"
+    ],
+    "colorProportions": [
+      0.37285864267780605,
+      0.20632978988227169,
+      0.35313933476991727,
+      0.06767223267000494
+    ]
   },
   {
     "type": "photo",
     "id": "423216025_33d8943efe_o.jpg",
     "title": "Bamboo Bridge",
     "description": "Pai, Thailand",
-    "camera": "Holga"
+    "camera": "Holga",
+    "colors": [
+      "#8d7561",
+      "#5e4424",
+      "#88643c",
+      "#d6bea2"
+    ],
+    "colorProportions": [
+      0.9931983859748407,
+      0.005990448859523855,
+      0.0008111651656354951,
+      0
+    ]
   },
   {
     "type": "photo",
@@ -399,7 +927,19 @@
     "title": "Temple",
     "description": "Jaipur, India",
     "camera": "Olympus XA",
-    "orientation": "horizontal"
+    "orientation": "horizontal",
+    "colors": [
+      "#c3230f",
+      "#7f0605",
+      "#e49ba9",
+      "#a04877"
+    ],
+    "colorProportions": [
+      0.5055765146437149,
+      0.26915446690641365,
+      0.15364605055741692,
+      0.07162296789245447
+    ]
   },
   {
     "type": "video",
@@ -414,7 +954,19 @@
     "type": "design",
     "title": "NYC 1987",
     "description": "Digital art",
-    "orientation": "vertical"
+    "orientation": "vertical",
+    "colors": [
+      "#452410",
+      "#dcba9c",
+      "#cb976a",
+      "#8d594b"
+    ],
+    "colorProportions": [
+      0.5802962383745237,
+      0,
+      0.2269882516631573,
+      0.19271550996231887
+    ]
   },
   {
     "id": "barika-rise.jpg",
@@ -422,7 +974,19 @@
     "title": "Barika - Rise",
     "description": "Album art",
     "orientation": "horizontal",
-    "filteredOrder": 4
+    "filteredOrder": 4,
+    "colors": [
+      "#e5c966",
+      "#c13c32",
+      "#705628",
+      "#705628"
+    ],
+    "colorProportions": [
+      0.51003008705255,
+      0.4292254547850586,
+      0,
+      0.060744458162391324
+    ]
   },
   {
     "type": "music",

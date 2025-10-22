@@ -16,6 +16,8 @@ export type Photo = {
   description?: string;
   camera?: string;
   orientation?: Orientation;
+  colors?: string[];
+  colorProportions?: number[];
 };
 
 export type Design = {
@@ -23,6 +25,8 @@ export type Design = {
   id: string;
   title: string;
   orientation?: Orientation;
+  colors?: string[];
+  colorProportions?: number[];
 };
 
 export type Orientation = "vertical" | "horizontal" | "banner" | "block";
