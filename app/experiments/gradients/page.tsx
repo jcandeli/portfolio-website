@@ -58,9 +58,7 @@ const Swatch = styled.div<{ $color: string }>`
 
 // Filter media items that have colors (photos and designs)
 const mediaWithColors = mediaData.filter(
-  (
-    item
-  ): item is typeof item & { colors: string[]; colorProportions?: number[] } =>
+  (item): item is typeof item & { colors: string[] } =>
     "colors" in item && Array.isArray(item.colors) && item.colors.length > 0
 );
 
@@ -72,10 +70,7 @@ export default function GradientsPage() {
       <Grid>
         {mediaWithColors.map((item) => (
           <BlobWrapper key={item.id}>
-            <GradientBlob
-              colors={item.colors}
-              colorProportions={item.colorProportions}
-            />
+            <GradientBlob colors={item.colors} />
             <Label>{item.title}</Label>
             <SwatchContainer>
               {item.colors.map((color, index) => (

@@ -4,7 +4,6 @@ import styled from "@emotion/styled";
 
 interface GradientBlobProps {
   colors: string[];
-  colorProportions?: number[];
   size?: number;
 }
 
@@ -82,15 +81,17 @@ const BlobContainer = styled.div<{
 
 export default function GradientBlob({
   colors,
-  colorProportions,
   size = 300,
 }: GradientBlobProps) {
   // First color is the background, rest are overlays
   const backgroundColor = colors[0];
   const overlayColors = colors.slice(1);
-  const overlayProportions = colorProportions?.slice(1);
 
-  const positions = getGradientPositions(overlayColors, overlayProportions);
+  // Fixed proportions: 50%, 25%, 15%, 10%
+  // Background (color 1) is 50%, so overlays get 25%, 15%, 10%
+  const fixedProportions = [0.25, 0.15, 0.1];
+
+  const positions = getGradientPositions(overlayColors, fixedProportions);
 
   const gradients = overlayColors
     .map((color, i) => {
