@@ -70,19 +70,16 @@ function getGradientPositions(colors: string[], proportions?: number[]) {
 const BlobContainer = styled.div<{
   $gradients: string;
   $backgroundColor: string;
-  $size: number;
+  $size?: number;
 }>`
-  width: ${(props) => props.$size}px;
-  height: ${(props) => props.$size}px;
+  width: ${(props) => (props.$size ? `${props.$size}px` : "100%")};
+  height: ${(props) => (props.$size ? `${props.$size}px` : "100%")};
   background-color: ${(props) => props.$backgroundColor};
   background-image: ${(props) => props.$gradients};
   background-blend-mode: normal;
 `;
 
-export default function GradientBlob({
-  colors,
-  size = 300,
-}: GradientBlobProps) {
+export default function GradientBlob({ colors, size }: GradientBlobProps) {
   // First color is the background, rest are overlays
   const backgroundColor = colors[0];
   const overlayColors = colors.slice(1);

@@ -70,7 +70,7 @@ export default function GradientsPage() {
       <Grid>
         {mediaWithColors.map((item) => (
           <BlobWrapper key={item.id}>
-            <GradientBlob colors={item.colors} />
+            <GradientBlob colors={item.colors} size={300} />
             <Label>{item.title}</Label>
             <SwatchContainer>
               {item.colors.map((color, index) => (
